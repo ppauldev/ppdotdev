@@ -1,10 +1,7 @@
 import * as React from "react"
+import WebView from "./webview"
 
-// markup
-const IndexPage = () => {
-  return (
-    <div>Hello world! </div>
-  )
-}
+// Reserved for top level utilities
+const App = () => <WebView />
 
-export default IndexPage
+export default App
