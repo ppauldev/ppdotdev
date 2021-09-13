@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react'
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client"
+import { gql, useQuery } from "@apollo/client"
 
 type SubpageProps = {
   name: string,
@@ -7,35 +7,30 @@ type SubpageProps = {
   bio?: string
 }
 
-const client = new ApolloClient({
-  uri: 'https://api-eu-central-1.graphcms.com/v2/ckthkvaiu44rx01xq5ffr9yrz/master',
-  cache: new InMemoryCache()
-});
+const postsQuery = gql`
+{ 
+  posts {
+    id
+    title
+    slug
+    date
+    preview
+    body
+  }
+}
+`
 
 const subpage: FC<SubpageProps> = ({ name = "Paul", id = 3, bio = 'Bio empty' }): ReactElement => {
-  React.useEffect(() => {
-    client
-      .query({
-        query: gql`
-        { 
-          posts {
-            id
-            title
-            slug
-            date
-            preview
-            body
-          }
-        }
-      `
-      })
-      .then(result => console.log(result));
-  }, [])
+  const { loading, error, data } = useQuery(postsQuery);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
 
   return (
     <div>
       <h2>Name: {name}, Id: {id}</h2>
       <p>{bio}</p>
+      <div>{JSON.stringify(data)}</div>
     </div>
   )
 }
