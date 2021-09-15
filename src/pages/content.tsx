@@ -1,11 +1,14 @@
 import * as React from "react"
+import Posts from "./Posts"
 
-const Content = ({ view }) => {
-  const DynamicComponent = React.lazy(() => import(`./${view}`))
+type ContentProps = {
+  postType: string
+}
 
+const Content: React.FC<ContentProps> = ({ postType }): React.ReactElement => {
   return (
     <React.Suspense fallback={<div>Page is loading ..</div>}>
-      <DynamicComponent name="Phillip" id={5} />
+      <Posts postType={postType} />
     </React.Suspense>
   )
 }
