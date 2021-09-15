@@ -1,18 +1,22 @@
 import * as React from "react"
-import Navigation from "./navigation"
-import Content from "./content"
-import Footer from "./footer"
+import Navigation from "./Navigation"
+import Content from "./Content"
+import Footer from "./Footer"
 
-const WebView = () => {
-  const [view, setView] = React.useState(null)
+const Webview = () => {
+  const [postType, setPostType] = React.useState("")
+
+  React.useEffect(() => {
+    console.log("posttype: ", postType)
+  }, [postType])
 
   return (
     <div>
-      <Navigation setView={setView} />
-      <Content view={view} />
+      <Navigation setPostType={setPostType} />
+      <Content postType={postType} />
       <Footer />
     </div>
   )
 }
 
-export default WebView
+export default Webview
