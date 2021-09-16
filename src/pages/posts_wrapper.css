@@ -2,8 +2,14 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: flex-start;
   justify-content: center;
+}
+
+section::after {
+  content: "";
+  margin-left: 370px;
 }
 
 @media only screen and (max-width: 842px) {
