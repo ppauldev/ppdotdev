@@ -1,5 +1,6 @@
 import * as React from "react"
-import Posts from "./Posts"
+import PostsWrapper from "./PostsWrapper"
+import "./content.css"
 
 type ContentProps = {
   postType: string
@@ -8,7 +9,9 @@ type ContentProps = {
 const Content: React.FC<ContentProps> = ({ postType }): React.ReactElement => {
   return (
     <React.Suspense fallback={<div>Page is loading ..</div>}>
-      <Posts postType={postType} />
+      <main>
+        <PostsWrapper postType={postType} />
+      </main>
     </React.Suspense>
   )
 }
