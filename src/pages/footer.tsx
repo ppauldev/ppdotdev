@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const Footer = () => {
+const Footer: React.FC = (): React.ReactElement => {
   return (
     <footer>Footer area</footer>
   )
