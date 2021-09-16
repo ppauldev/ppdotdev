@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useQuery } from "@apollo/client"
 import postsQuery from './queries/postsQuery'
-import Post from "./Post"
+import Post from "./post"
 import "./posts_wrapper.css"
 
 type PostsProps = {
