@@ -2,7 +2,7 @@ import * as React from "react"
 
 const Footer = () => {
   return (
-    <div>Footer area</div>
+    <footer>Footer area</footer>
   )
 }
 

@@ -1,0 +1,31 @@
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 842px) {
+  section {
+    min-width: 842px;
+  }
+}
+
+@media only screen and (min-width: 842px) and (max-width: 1140px) {
+  section {
+    min-width: 784px;
+  }
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1268px) {
+  section {
+    min-width: 1036px;
+  }
+}
+
+@media only screen and (min-width: 1268px) {
+  section {
+    min-width: 1276px;
+  }
+}
