@@ -2,8 +2,8 @@ import * as React from "react"
 import PostsWrapper from "./postsWrapper"
 import "./content.css"
 
-type ContentProps = {
-  postType: string
+interface ContentProps {
+  postType: string,
 }
 
 const Content: React.FC<ContentProps> = ({ postType }): React.ReactElement => {

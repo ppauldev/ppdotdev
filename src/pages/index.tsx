@@ -1,10 +1,11 @@
 import * as React from "react"
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client"
+import { GRAPH_CMS_API_URL } from "../api/apiConfig"
 import Webview from "./webview"
 
 const client = new ApolloClient({
-  uri: 'https://api-eu-central-1.graphcms.com/v2/ckthkvaiu44rx01xq5ffr9yrz/master',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
+  uri: GRAPH_CMS_API_URL,
 });
 
 // Reserved for top level utilities
