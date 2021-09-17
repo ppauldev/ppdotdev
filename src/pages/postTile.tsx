@@ -7,7 +7,7 @@ interface PostProps {
   date: Date,
 }
 
-const Post: React.FC<PostProps> = ({ title, body, date }): React.ReactElement => {
+const PostTile: React.FC<PostProps> = ({ title, body, date }): React.ReactElement => {
   return (
     <article className="post">
       <div>Date: {date}</div>
@@ -17,4 +17,4 @@ const Post: React.FC<PostProps> = ({ title, body, date }): React.ReactElement =>
   )
 }
 
-export default Post
+export default PostTile
