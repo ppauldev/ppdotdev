@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client"
 
 const postsQuery = gql`
-    { 
+    {
       posts {
         id
         title
