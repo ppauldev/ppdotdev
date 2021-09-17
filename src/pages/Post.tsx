@@ -1,10 +1,10 @@
 import * as React from "react"
 import "./post.css"
 
-type PostProps = {
+interface PostProps {
   title: string,
   body: string,
-  date: Date
+  date: Date,
 }
 
 const Post: React.FC<PostProps> = ({ title, body, date }): React.ReactElement => {

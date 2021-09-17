@@ -11,7 +11,7 @@ const navigationItems: Array<string[]> = Object.entries({
 })
 
 interface NavigationProps {
-  setPostType: (args: string) => void
+  setPostType: (args: string) => void,
 }
 
 const Navigation: React.FC<NavigationProps> = ({ setPostType }): React.ReactElement => {

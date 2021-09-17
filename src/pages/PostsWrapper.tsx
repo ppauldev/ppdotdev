@@ -4,15 +4,15 @@ import postsQuery from './queries/postsQuery'
 import Post from "./post"
 import "./posts_wrapper.css"
 
-type PostsProps = {
-  postType: string
+interface PostsProps {
+  postType: string,
 }
 
-type PostType = {
+interface PostType {
   type: string,
   title: string,
   body: string,
-  date: Date
+  date: Date,
 }
 
 const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.ReactElement => {
