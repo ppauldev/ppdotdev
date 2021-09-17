@@ -13,6 +13,7 @@ interface PostType {
   title: string,
   body: string,
   date: Date,
+  slug: string,
 }
 
 const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.ReactElement => {
@@ -23,7 +24,7 @@ const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.Re
 
   const postsToRender = data.posts.filter((post: PostType) => post.type === postType)
   const posts = postsToRender.map((postToRender: PostType) => {
-    return <PostTile title={postToRender.title} body={postToRender.body} date={postToRender.date} />
+    return <PostTile title={postToRender.title} body={postToRender.body} date={postToRender.date} slug={postToRender.slug} />
   })
 
   return (<section>{posts}</section>)

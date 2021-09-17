@@ -5,15 +5,18 @@ interface PostProps {
   title: string,
   body: string,
   date: Date,
+  slug: string,
 }
 
-const PostTile: React.FC<PostProps> = ({ title, body, date }): React.ReactElement => {
+const PostTile: React.FC<PostProps> = ({ title, body, date, slug }): React.ReactElement => {
   return (
-    <article className="post">
-      <div>Date: {date}</div>
-      <div>Title: {title}</div>
-      <div>Body: {body}</div>
-    </article>
+    <a href={slug} className="post-tile-slug">
+      <article className="post-tile">
+        <div>Date: {date}</div>
+        <div>Title: {title}</div>
+        <div>Body: {body}</div>
+      </article>
+    </a>
   )
 }
 
