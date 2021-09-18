@@ -1,5 +1,3 @@
-const path = require("path")
-
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     {
@@ -16,12 +14,11 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   `)
-  const postTemplate = path.resolve(`./src/pages/post.tsx`)
   data.graph_cms.posts.forEach(node => {
     const slug = node.slug
     actions.createPage({
       path: slug,
-      component: postTemplate,
+      component: require.resolve(`./src/pages/post.tsx`),
       context: { slug: slug },
     })
   })
