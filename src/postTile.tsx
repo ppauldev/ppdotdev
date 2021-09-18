@@ -1,14 +1,14 @@
 import * as React from "react"
 import "./post_tile.css"
 
-interface PostProps {
+interface IPostTile {
   title: string,
   preview: string,
   date: Date,
   slug: string,
 }
 
-const PostTile: React.FC<PostProps> = ({ title, preview, date, slug }): React.ReactElement => {
+const PostTile: React.FC<IPostTile> = ({ title, preview, date, slug }): React.ReactElement => {
   return (
     <a href={slug} className="post-tile-slug">
       <article className="post-tile">

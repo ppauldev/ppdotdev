@@ -11,11 +11,11 @@ const navigationItems: string[][] = Object.entries({
   testing: "Testing",
 })
 
-interface NavigationProps {
+interface INavigation {
   setPostType: (args: string) => void,
 }
 
-const Navigation: React.FC<NavigationProps> = ({ setPostType }): React.ReactElement => {
+const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement => {
   const [activeElement, setActiveElement] = React.useState("research")
 
   React.useEffect(() => {

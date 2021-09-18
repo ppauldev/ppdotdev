@@ -4,11 +4,11 @@ import PostsGrid from "./PostsGrid"
 
 import "./content.css"
 
-interface ContentProps {
+interface IContent {
   postType: string,
 }
 
-const Content: React.FC<ContentProps> = ({ postType }): React.ReactElement => {
+const Content: React.FC<IContent> = ({ postType }): React.ReactElement => {
   return (
     <main>
       <PostsGrid postType={postType} />
