@@ -8,11 +8,9 @@ interface ContentProps {
 
 const Content: React.FC<ContentProps> = ({ postType }): React.ReactElement => {
   return (
-    <React.Suspense fallback={<div>Page is loading ..</div>}>
-      <main>
-        <PostsGrid postType={postType} />
-      </main>
-    </React.Suspense>
+    <main>
+      <PostsGrid postType={postType} />
+    </main>
   )
 }
 
