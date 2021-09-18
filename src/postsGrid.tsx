@@ -13,7 +13,7 @@ interface PostsProps {
 interface PostType {
   type: string,
   title: string,
-  body: string,
+  preview: string,
   date: Date,
   slug: string,
 }
@@ -27,7 +27,6 @@ const PostsGrid: React.FC<PostsProps> = ({ postType = "research" }): React.React
         slug
         date
         preview
-        body
         type
       }
     }
@@ -42,7 +41,7 @@ const PostsGrid: React.FC<PostsProps> = ({ postType = "research" }): React.React
       <PostTile
         key={postToRender.slug}
         title={postToRender.title}
-        body={postToRender.body}
+        preview={postToRender.preview}
         date={postToRender.date}
         slug={postToRender.slug}
       />
