@@ -3,11 +3,11 @@ import "./navigation.css"
 
 const navigationItems: Array<string[]> = Object.entries({
   //attributeValue: textValue//
-  "research": "Research",
-  "cleancode": "Clean code",
-  "testing": "Testing",
-  "protocols": "Protocols",
-  "bookscoffee": "Books+Coffee",
+  bookscoffee: "Books+Coffee",
+  cleancode: "Clean code",
+  protocols: "Protocols",
+  research: "Research",
+  testing: "Testing",
 })
 
 interface NavigationProps {
@@ -30,7 +30,7 @@ const Navigation: React.FC<NavigationProps> = ({ setPostType }): React.ReactElem
 
   const listElements = navigationItems.map((item: string[]) => {
     const [attributeValue, textValue] = item
-    return (<li className={activeElement === attributeValue ? "active" : ""} onClick={handleSelectPostType} value={attributeValue}>{textValue}</li>)
+    return (<li key={attributeValue} className={activeElement === attributeValue ? "active" : ""} onClick={handleSelectPostType} value={attributeValue}>{textValue}</li>)
   })
 
   return (

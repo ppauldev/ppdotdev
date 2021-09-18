@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.phillippaul.dev",
@@ -18,5 +20,14 @@ module.exports = {
         url: "https://api-eu-central-1.graphcms.com/v2/ckthkvaiu44rx01xq5ffr9yrz/master",
       },
     },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        "components": path.join(__dirname, "src/components"),
+        "templates": path.join(__dirname, "src/templates"),
+        "src": path.join(__dirname, 'src'),
+        "pages": path.join(__dirname, 'src/pages')
+      }
+    }
   ],
 };
