@@ -6,9 +6,10 @@
     ],
     "jsRules": {},
     "rules": {
+        "semicolon": false,
         "quotemark": [
             true,
-            "single",
+            "double",
             "jsx-double"
         ],
         "interface-name": [

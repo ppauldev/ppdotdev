@@ -1,18 +1,19 @@
 import * as React from "react"
 import { useQuery } from "@apollo/client"
 import postsQuery from './queries/postsQuery'
-import Post from "./post"
+import PostTile from "./postTile"
 import "./posts_wrapper.css"
 
-type PostsProps = {
-  postType: string
+interface PostsProps {
+  postType: string,
 }
 
-type PostType = {
+interface PostType {
   type: string,
   title: string,
   body: string,
-  date: Date
+  date: Date,
+  slug: string,
 }
 
 const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.ReactElement => {
@@ -23,7 +24,7 @@ const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.Re
 
   const postsToRender = data.posts.filter((post: PostType) => post.type === postType)
   const posts = postsToRender.map((postToRender: PostType) => {
-    return <Post title={postToRender.title} body={postToRender.body} date={postToRender.date} />
+    return <PostTile title={postToRender.title} body={postToRender.body} date={postToRender.date} slug={postToRender.slug} />
   })
 
   return (<section>{posts}</section>)
