@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useQuery } from "@apollo/client"
-import postsQuery from './queries/postsQuery'
+import postsQuery from "./queries/postsQuery"
 import PostTile from "./postTile"
 import "./posts_wrapper.css"
 
@@ -24,7 +24,7 @@ const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.Re
 
   const postsToRender = data.posts.filter((post: PostType) => post.type === postType)
   const posts = postsToRender.map((postToRender: PostType) => {
-    return <PostTile title={postToRender.title} body={postToRender.body} date={postToRender.date} slug={postToRender.slug} />
+    return <PostTile key={postToRender.slug} title={postToRender.title} body={postToRender.body} date={postToRender.date} slug={postToRender.slug} />
   })
 
   return (<section>{posts}</section>)
