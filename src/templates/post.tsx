@@ -1,5 +1,5 @@
 import * as React from "react"
-import "./post_tile.css"
+import "../pages/post_tile.css"
 
 interface PostProps {
   title: string,

@@ -16,7 +16,7 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   `)
-  const postTemplate = path.resolve("./src/pages/post.tsx")
+  const postTemplate = path.resolve("./src/templates/post.tsx")
   data.graph_cms.posts.forEach(node => {
     const slug = node.slug
     actions.createPage({
