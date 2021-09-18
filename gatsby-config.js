@@ -1,4 +1,6 @@
-const path = require('path')
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -12,13 +14,10 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        // Arbitrary name for the remote schema Query type
-        typeName: "GRAPH_CMS",
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-        fieldName: "graph_cms",
-        // Url to query from
-        url: "https://api-eu-central-1.graphcms.com/v2/ckthkvaiu44rx01xq5ffr9yrz/master",
+        typeName: "graph_cms", // Custom remote schema query type
+        fieldName: "graph_cms", // Custom temote schema query field
+        url: process.env.GATSBY_GRAPH_CMS_API_URL,
       },
-    }
+    },
   ],
-};
+}

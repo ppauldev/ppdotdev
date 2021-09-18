@@ -1,21 +1,24 @@
 import * as React from "react"
+
 import { gql, useQuery } from "@apollo/client"
-import PostTile from "./postTile"
+
+import PostTile from "./PostTile"
+
 import "./posts_wrapper.css"
 
-interface PostsProps {
+interface IPostsGrid {
   postType: string,
 }
 
-interface PostType {
+interface IPostGridProps {
   type: string,
   title: string,
-  body: string,
+  preview: string,
   date: Date,
   slug: string,
 }
 
-const PostsGrid: React.FC<PostsProps> = ({ postType = "research" }): React.ReactElement => {
+const PostsGrid: React.FC<IPostsGrid> = ({ postType = "research" }): React.ReactElement => {
   const { loading, error, data } = useQuery(gql`
     {
       posts {
@@ -24,18 +27,25 @@ const PostsGrid: React.FC<PostsProps> = ({ postType = "research" }): React.React
         slug
         date
         preview
-        body
         type
       }
     }
   `)
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error :(</p>
+  if (loading) { return <p>Loading...</p> }
+  if (error) { return <p>Error :(</p> }
 
-  const postsToRender = data.posts.filter((post: PostType) => post.type === postType)
-  const posts = postsToRender.map((postToRender: PostType) => {
-    return <PostTile key={postToRender.slug} title={postToRender.title} body={postToRender.body} date={postToRender.date} slug={postToRender.slug} />
+  const postsToRender = data.posts.filter((post: IPostGridProps) => post.type === postType)
+  const posts = postsToRender.map((postToRender: IPostGridProps) => {
+    return (
+      <PostTile
+        key={postToRender.slug}
+        title={postToRender.title}
+        preview={postToRender.preview}
+        date={postToRender.date}
+        slug={postToRender.slug}
+      />
+    )
   })
 
   return (<section>{posts}</section>)
