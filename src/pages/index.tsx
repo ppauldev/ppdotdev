@@ -1,14 +1,14 @@
 import * as React from "react"
+import fetch from "cross-fetch"
 
 import { ApolloClient, ApolloProvider, InMemoryCache, HttpLink } from "@apollo/client"
-import fetch from "cross-fetch"
 
 import Webview from "../Webview"
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink(
-    { uri: process.env.GATSBY_GRAPH_CMS_API_URL, fetch }
+    { uri: process.env.GATSBY_GRAPH_CMS_API_URL, fetch },
   ),
 })
 

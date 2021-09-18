@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { gql, useQuery } from "@apollo/client"
+import { graphql, useStaticQuery } from "gatsby"
 
 import PostTile from "./PostTile"
 
@@ -18,24 +18,26 @@ interface IPostGridProps {
   slug: string,
 }
 
-const PostsGrid: React.FC<IPostsGrid> = ({ postType = "research" }): React.ReactElement => {
-  const { loading, error, data } = useQuery(gql`
-    {
+const GRAPH_CMS_GRID_QUERY = graphql`
+  {
+    graph_cms {
       posts {
         id
         title
-        slug
         date
+        body
         preview
+        slug
         type
       }
     }
-  `)
+  }
+`
 
-  if (loading) { return <p>Loading...</p> }
-  if (error) { return <p>Error :(</p> }
+const PostsGrid: React.FC<IPostsGrid> = ({ postType = "research" }): React.ReactElement => {
+  const queryData = useStaticQuery(GRAPH_CMS_GRID_QUERY)
 
-  const postsToRender = data.posts.filter((post: IPostGridProps) => post.type === postType)
+  const postsToRender = queryData.graph_cms.posts.filter((post: IPostGridProps) => post.type === postType)
   const posts = postsToRender.map((postToRender: IPostGridProps) => {
     return (
       <PostTile
