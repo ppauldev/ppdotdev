@@ -16,13 +16,19 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   `)
-  const postTemplate = path.resolve("./src/templates/post.tsx")
-  data.graph_cms.posts.forEach(node => {
-    const slug = node.slug
-    actions.createPage({
-      path: slug,
-      component: postTemplate,
-      context: { slug: slug },
+  const postTemplate =
+    data.graph_cms.posts.forEach(node => {
+      const slug = node.slug
+      actions.createPage({
+        path: slug,
+        component: path.resolve("./src/templates/post.tsx"),
+        context: { slug: slug },
+      })
     })
+
+  actions.createPage({
+    path: "/",
+    component: path.resolve("./src/pages/index.tsx"),
+    context: { "index": "/" }
   })
 }
