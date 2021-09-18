@@ -1,9 +1,12 @@
 import * as React from "react"
+
 import fetch from "cross-fetch"
 
-import { ApolloClient, ApolloProvider, InMemoryCache, HttpLink } from "@apollo/client"
+import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from "@apollo/client"
 
 import Webview from "../Webview"
+
+import "@fontsource/lato"
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),

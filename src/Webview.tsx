@@ -4,6 +4,8 @@ import Content from "./Content"
 import Footer from "./Footer"
 import Navigation from "./Navigation"
 
+import "./webview.css"
+
 const Webview: React.FC = (): React.ReactElement => {
   const [postType, setPostType] = React.useState("")
 

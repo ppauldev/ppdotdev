@@ -45,7 +45,7 @@ const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement 
 
   return (
     <header>
-      <div>Logo</div>
+      <div id="logo">Logo</div>
       <nav>
         <ul>
           {listElements}
