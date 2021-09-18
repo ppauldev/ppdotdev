@@ -9,6 +9,12 @@ a.post-tile-slug {
   flex-shrink: 0;
   justify-content: flex-start;
   margin: 10px;
+  transition: all 0.2s ease-out;
+}
+
+a.post-tile-slug:hover {
+  box-shadow: 2px 8px 12px rgb(171, 171, 171);
+  transition: all 0.2s ease-in;
 }
 
 @media only screen and (max-width: 842px) {

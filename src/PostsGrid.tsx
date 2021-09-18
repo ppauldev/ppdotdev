@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import PostTile from "./PostTile"
 
-import "./posts_wrapper.css"
+import "./posts_grid.css"
 
 interface IPostsGrid {
   postType: string,

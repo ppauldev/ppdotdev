@@ -1,10 +1,12 @@
 import * as React from "react"
 
+import Emoji from "react-emoji-render";
+
 import "./navigation.css"
 
 const navigationItems: string[][] = Object.entries({
   // attributeValue: textValue //
-  bookscoffee: "Books+Coffee",
+  bookscoffee: "+",
   cleancode: "Clean code",
   protocols: "Protocols",
   research: "Research",
@@ -34,18 +36,19 @@ const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement 
     return (
       <li
         key={attributeValue}
+        id={attributeValue === "bookscoffee" ? "special" : ""}
         className={activeElement === attributeValue ? "active" : ""}
         onClick={handleSelectPostType}
         value={attributeValue}
       >
-        {textValue}
+        {attributeValue !== "bookscoffee" ? textValue : <Emoji text=":books: + :coffee:" />}
       </li>
     )
   })
 
   return (
     <header>
-      <div>Logo</div>
+      <div id="logo">Logo</div>
       <nav>
         <ul>
           {listElements}
