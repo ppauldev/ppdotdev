@@ -1,5 +1,5 @@
 import * as React from "react"
-import PostsWrapper from "./postsWrapper"
+import PostsWrapper from "./src/postsWrapper"
 import "./content.css"
 
 interface ContentProps {
