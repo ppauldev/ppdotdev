@@ -1,7 +1,8 @@
 import * as React from "react"
-import Navigation from "./navigation"
-import Content from "./content"
-import Footer from "./footer"
+
+import Content from "./Content"
+import Footer from "./Footer"
+import Navigation from "./Navigation"
 
 const Webview: React.FC = (): React.ReactElement => {
   const [postType, setPostType] = React.useState("")

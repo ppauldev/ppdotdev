@@ -1,5 +1,7 @@
 import * as React from "react"
-import PostsGrid from "./postsGrid"
+
+import PostsGrid from "./PostsGrid"
+
 import "./content.css"
 
 interface ContentProps {

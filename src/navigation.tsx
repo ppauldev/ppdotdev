@@ -1,8 +1,9 @@
 import * as React from "react"
+
 import "./navigation.css"
 
-const navigationItems: Array<string[]> = Object.entries({
-  //attributeValue: textValue//
+const navigationItems: string[][] = Object.entries({
+  // attributeValue: textValue //
   bookscoffee: "Books+Coffee",
   cleancode: "Clean code",
   protocols: "Protocols",
@@ -30,7 +31,16 @@ const Navigation: React.FC<NavigationProps> = ({ setPostType }): React.ReactElem
 
   const listElements = navigationItems.map((item: string[]) => {
     const [attributeValue, textValue] = item
-    return (<li key={attributeValue} className={activeElement === attributeValue ? "active" : ""} onClick={handleSelectPostType} value={attributeValue}>{textValue}</li>)
+    return (
+      <li
+        key={attributeValue}
+        className={activeElement === attributeValue ? "active" : ""}
+        onClick={handleSelectPostType}
+        value={attributeValue}
+      >
+        {textValue}
+      </li>
+    )
   })
 
   return (
