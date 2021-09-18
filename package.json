@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@apollo/client": "^3.4.12",
+    "@apollo/client": "3.3.21",
     "gatsby": "^3.13.0",
     "gatsby-plugin-gatsby-cloud": "^3.2.0",
     "gatsby-plugin-typescript": "^3.14.0",
