@@ -6,7 +6,8 @@ import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from "@apollo/c
 
 import Webview from "../Webview"
 
-import "@fontsource/lato"
+import "@fontsource/abeezee"
+import "@fontsource/architects-daughter"
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
