@@ -1,6 +1,5 @@
 import * as React from "react"
-import { useQuery } from "@apollo/client"
-import postsQuery from "./queries/postsQuery"
+import { gql, useQuery } from "@apollo/client"
 import PostTile from "./postTile"
 import "./posts_wrapper.css"
 
@@ -17,7 +16,19 @@ interface PostType {
 }
 
 const PostsGrid: React.FC<PostsProps> = ({ postType = "research" }): React.ReactElement => {
-  const { loading, error, data } = useQuery(postsQuery)
+  const { loading, error, data } = useQuery(gql`
+    {
+      posts {
+        id
+        title
+        slug
+        date
+        preview
+        body
+        type
+      }
+    }
+  `)
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
