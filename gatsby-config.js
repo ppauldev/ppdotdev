@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "graph_cms", // Custom remote schema query type
+        typeName: "GRAPH_CMS", // Custom remote schema query type
         fieldName: "graph_cms", // Custom temote schema query field
         url: process.env.GATSBY_GRAPH_CMS_API_URL,
       },
