@@ -1,5 +1,5 @@
 import * as React from "react"
-import PostsWrapper from "./src/postsWrapper"
+import PostsGrid from "./postsGrid"
 import "./content.css"
 
 interface ContentProps {
@@ -10,7 +10,7 @@ const Content: React.FC<ContentProps> = ({ postType }): React.ReactElement => {
   return (
     <React.Suspense fallback={<div>Page is loading ..</div>}>
       <main>
-        <PostsWrapper postType={postType} />
+        <PostsGrid postType={postType} />
       </main>
     </React.Suspense>
   )

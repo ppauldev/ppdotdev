@@ -16,7 +16,7 @@ interface PostType {
   slug: string,
 }
 
-const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.ReactElement => {
+const PostsGrid: React.FC<PostsProps> = ({ postType = "research" }): React.ReactElement => {
   const { loading, error, data } = useQuery(postsQuery)
 
   if (loading) return <p>Loading...</p>
@@ -30,4 +30,4 @@ const PostsWrapper: React.FC<PostsProps> = ({ postType = "research" }): React.Re
   return (<section>{posts}</section>)
 }
 
-export default PostsWrapper
+export default PostsGrid
