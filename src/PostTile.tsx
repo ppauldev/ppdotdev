@@ -1,20 +1,30 @@
 import * as React from "react"
+
 import "./post_tile.css"
 
 interface IPostTile {
-  title: string,
-  preview: string,
-  date: Date,
-  slug: string,
+  post: IPostTileProps
 }
 
-const PostTile: React.FC<IPostTile> = ({ title, preview, date, slug }): React.ReactElement => {
+interface IPostTileProps {
+  slug: string,
+  title: string,
+  date: Date,
+  preview: string,
+  body: string,
+  type: string,
+}
+
+const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {
   return (
-    <a href={slug} className="post-tile-slug">
+    <a href={post.slug} className="post-tile-slug">
       <article className="post-tile">
-        <div>Date: {date}</div>
-        <div>Title: {title}</div>
-        <div>Preview: {preview}</div>
+        <div className="post-tile-image">Image</div>
+        <div className="post-tile-content">
+          <h2>Title: {post.title}</h2>
+          <div>Date: {post.date}</div>
+          <div>Preview: {post.preview}</div>
+        </div>
       </article>
     </a>
   )

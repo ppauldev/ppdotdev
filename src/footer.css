@@ -14,8 +14,8 @@ footer div {
   display: flex;
   flex-direction: row;
   font-size: 12px;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: space-evenly;
+  width: 40%;
 }
 
 #footer-break {
@@ -23,6 +23,6 @@ footer div {
   width: 4px;
 }
 
-.social-icon:hover {
+footer span:hover {
   cursor: pointer;
 }
