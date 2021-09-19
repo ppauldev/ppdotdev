@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import { LogoGithub, LogoLinkedin, Mail } from 'react-ionicons'
+import { LogoGithub, LogoLinkedin, Mail } from "react-ionicons"
 
-import "./footer.css"
+import "./styles/footer.css"
 
 const Footer: React.FC = (): React.ReactElement => {
   return (
@@ -12,17 +12,17 @@ const Footer: React.FC = (): React.ReactElement => {
         <div id="footer-break">|</div>
         <div>
           <LogoGithub
-            color={'#00000'}
+            color="#00000"
             height="22px"
             width="22px"
           />
           <LogoLinkedin
-            color={'#00000'}
+            color="#00000"
             height="22px"
             width="22px"
           />
           <Mail
-            color={'#00000'}
+            color="#00000"
             height="22px"
             width="22px"
           />
