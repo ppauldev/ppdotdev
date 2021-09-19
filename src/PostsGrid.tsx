@@ -10,12 +10,13 @@ interface IPostsGrid {
   postType: string,
 }
 
-interface IPostGridProps {
-  type: string,
-  title: string,
-  preview: string,
-  date: Date,
+interface IPostTileProps {
   slug: string,
+  title: string,
+  date: Date,
+  preview: string,
+  body: string,
+  type: string,
 }
 
 const GRAPH_CMS_GRID_QUERY = graphql`
@@ -36,21 +37,20 @@ const GRAPH_CMS_GRID_QUERY = graphql`
 
 const PostsGrid: React.FC<IPostsGrid> = ({ postType = "research" }): React.ReactElement => {
   const queryData = useStaticQuery(GRAPH_CMS_GRID_QUERY)
+  const postsToRender = queryData.graph_cms.posts.filter((post: IPostTileProps) => post.type === postType)
 
-  const postsToRender = queryData.graph_cms.posts.filter((post: IPostGridProps) => post.type === postType)
-  const posts = postsToRender.map((postToRender: IPostGridProps) => {
-    return (
-      <PostTile
-        key={postToRender.slug}
-        title={postToRender.title}
-        preview={postToRender.preview}
-        date={postToRender.date}
-        slug={postToRender.slug}
-      />
-    )
-  })
-
-  return (<section>{posts}</section>)
+  return (
+    <section>
+      {postsToRender.map((postToRender: IPostTileProps) => {
+        return (
+          <PostTile
+            key={postToRender.slug}
+            post={postToRender}
+          />
+        )
+      })}
+    </section>
+  )
 }
 
 export default PostsGrid

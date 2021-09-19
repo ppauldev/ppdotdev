@@ -1,20 +1,34 @@
 import * as React from "react"
+
+import moment from "moment"
+
 import "./post_tile.css"
 
 interface IPostTile {
-  title: string,
-  preview: string,
-  date: Date,
-  slug: string,
+  post: IPostTileProps
 }
 
-const PostTile: React.FC<IPostTile> = ({ title, preview, date, slug }): React.ReactElement => {
+interface IPostTileProps {
+  slug: string,
+  title: string,
+  date: Date,
+  preview: string,
+  body: string,
+  type: string,
+}
+
+const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {
   return (
-    <a href={slug} className="post-tile-slug">
+    <a href={post.slug} className="post-tile-slug">
       <article className="post-tile">
-        <div>Date: {date}</div>
-        <div>Title: {title}</div>
-        <div>Preview: {preview}</div>
+        <div className="post-tile-image" />
+        <div className="post-tile-content">
+          <div className="post-tile-content-main">
+            <h2>{post.title}</h2>
+            <h3>{post.preview}</h3>
+          </div>
+          <p className="post-tile-content-side">{moment(post.date).format("LL")}</p>
+        </div>
       </article>
     </a>
   )

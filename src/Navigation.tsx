@@ -6,7 +6,7 @@ import "./navigation.css"
 
 const navigationItems: string[][] = Object.entries({
   // attributeValue: textValue //
-  bookscoffee: "+",
+  bookscoffee: "Books + Coffee",
   cleancode: "Clean code",
   protocols: "Protocols",
   research: "Research",
@@ -41,7 +41,7 @@ const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement 
         onClick={handleSelectPostType}
         value={attributeValue}
       >
-        {attributeValue !== "bookscoffee" ? textValue : <Emoji text=":books: + :coffee:" />}
+        {attributeValue !== "bookscoffee" ? textValue : <Emoji text=":books: :coffee:" />}
       </li>
     )
   })

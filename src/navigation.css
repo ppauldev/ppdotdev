@@ -9,29 +9,29 @@
 }
 
 #logo {
-  background-image: url("./images/73974310.png");
+  background: url("./images/73974310.webp");
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 4px;
-  height: 70%;
-  margin-top: 6px;
-  transition: all 0.1s ease-out;
-  width: 70%;
+  border-radius: 6px;
+  filter: saturate(0.3);
+  height: 53px;
+  width: 52px;
 }
 
 #logo:hover {
   cursor: pointer;
-  filter: saturate(2);
-  transition: all 0.1s ease-in;
 }
 
 #special {
+  border: 1px solid transparent;
   color: rgb(110, 110, 110);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 #special:hover {
+  border: 1px solid transparent;
   color: rgb(36, 36, 36);
+  filter: saturate(1.5);
 }
 
 header {
@@ -52,8 +52,10 @@ nav {
 }
 
 nav ul {
+  align-items: center;
   display: flex;
   flex-direction: row-reverse;
+  height: 64px;
   justify-content: space-evenly;
   list-style: none;
   margin: 0 120px 0 60px;
@@ -62,17 +64,18 @@ nav ul {
 }
 
 nav ul li {
+  align-items: center;
+  border: 1px solid transparent;
   color: rgb(110, 110, 110);
   display: flex;
   flex-direction: row;
-  align-items: center;
-  font-size: 1.2rem;
-  height: 60px;
+  font-size: 0.9rem;
+  height: 44px;
   transition: all 0.1s ease-out;
 }
 
 nav ul li:hover{
-  color: rgb(36, 36, 36);
+  border-bottom: 1px solid rgb(36, 36, 36);
   cursor: pointer;
   transition: all 0.1s ease-in
 }
