@@ -1,12 +1,21 @@
-#logo {
+#logo-wrapper {
   align-items: center;
-  background-color: lightgoldenrodyellow;
   display: flex;
   flex-direction: row;
   height: 80px;
   justify-content: center;
   margin: 0 30px 0 30px;
   width: 80px;
+}
+
+#logo {
+  background-image: url("./images/73974310.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 4px;
+  height: 70%;
+  margin-top: 6px;
+  width: 70%;
 }
 
 #special {
@@ -31,7 +40,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0 30px 0 30px;
+  margin: 0 0 0 0;
   width: 100%;
 }
 
