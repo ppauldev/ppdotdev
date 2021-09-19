@@ -9,20 +9,17 @@
 }
 
 #logo {
-  background-image: url("./images/73974310.png");
+  background: url("./images/73974310.png");
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 4px;
-  height: 70%;
-  margin-top: 6px;
-  transition: all 0.1s ease-out;
-  width: 70%;
+  border-radius: 6px;
+  filter: saturate(0.3);
+  height: 53px;
+  width: 52px;
 }
 
 #logo:hover {
   cursor: pointer;
-  filter: saturate(2);
-  transition: all 0.1s ease-in;
 }
 
 #special {
