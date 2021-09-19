@@ -59,7 +59,7 @@ exports.createPages = async function ({ actions, graphql }) {
   data.graph_cms.posts.forEach(post => {
     actions.createPage({
       path: post.slug,
-      component: path.resolve("./src/templates/Post.tsx"),
+      component: path.resolve("./src/templates/PostTemplate.tsx"),
       context: { post: post },
     })
   })

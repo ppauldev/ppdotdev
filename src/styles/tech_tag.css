@@ -1,0 +1,13 @@
+button.tech-tag {
+  background-color: white;
+	border-radius: 16px;
+	border: 1px solid #566963;
+  cursor: default;
+	color: black;
+	display: inline-block;
+	font-family: Arial;
+	font-size: 10px;
+  margin: 2px;
+  padding: 8px 16px;
+	text-decoration: none;
+}

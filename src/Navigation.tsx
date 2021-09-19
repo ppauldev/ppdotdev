@@ -2,7 +2,7 @@ import * as React from "react"
 
 import Emoji from "react-emoji-render";
 
-import "./navigation.css"
+import "./styles/navigation.css"
 
 const navigationItems: string[][] = Object.entries({
   // attributeValue: textValue //

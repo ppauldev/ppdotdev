@@ -1,0 +1,25 @@
+article.post {
+  width: 70%;
+}
+
+div.post-content {
+  margin-top: 60px;
+}
+
+div.post-content-intro {
+  border-bottom: 1px solid lightgrey;
+}
+
+div.post-info {
+  font-size: 14px;
+}
+
+div.post-content-intro h1 {
+  font-size: 2.5rem;
+  margin: 40px 0 20px 0;
+}
+
+div.post-content-markdown {
+  margin-top: 60px;
+  text-align: justify;
+}
