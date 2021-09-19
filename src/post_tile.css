@@ -22,7 +22,7 @@ a.post-tile-slug:hover {
 @media only screen and (max-width: 842px) {
   a.post-tile-slug {
     flex-basis: 600px;
-    height: 440px;
+    height: 500px;
   }
 }
 
@@ -53,16 +53,36 @@ article.post-tile {
 }
 
 .post-tile-image {
-  background-color: lightgoldenrodyellow;
+  background-color: darkslategrey;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   height: 200px;
 }
 
 .post-tile-content {
+  height: 260px;
   padding: 20px;
+}
+
+.post-tile-content-main {
+  height: 240px;
+}
+
+.post-tile-content-side {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  justify-content: flex-start;
+  height: 20px;
 }
 
 article h2 {
   color: rgb(36, 36, 36);
+  padding-bottom: 20px;
+}
+
+article h3 {
+  font-size: 14px;
+  font-weight: normal;
 }

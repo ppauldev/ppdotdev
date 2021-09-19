@@ -26,6 +26,7 @@
     "gatsby-source-graphql": "^3.14.0",
     "gatsby-transformer-remark": "^4.11.0",
     "graphql": "^15.5.3",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-emoji-render": "^1.2.4",

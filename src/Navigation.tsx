@@ -6,7 +6,7 @@ import "./navigation.css"
 
 const navigationItems: string[][] = Object.entries({
   // attributeValue: textValue //
-  bookscoffee: "+",
+  bookscoffee: "Books + Coffee",
   cleancode: "Clean code",
   protocols: "Protocols",
   research: "Research",

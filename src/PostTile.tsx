@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import moment from "moment"
+
 import "./post_tile.css"
 
 interface IPostTile {
@@ -19,11 +21,13 @@ const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {
   return (
     <a href={post.slug} className="post-tile-slug">
       <article className="post-tile">
-        <div className="post-tile-image">Image</div>
+        <div className="post-tile-image" />
         <div className="post-tile-content">
-          <h2>Title: {post.title}</h2>
-          <div>Date: {post.date}</div>
-          <div>Preview: {post.preview}</div>
+          <div className="post-tile-content-main">
+            <h2>{post.title}</h2>
+            <h3>{post.preview}</h3>
+          </div>
+          <p className="post-tile-content-side">{moment(post.date).format("LL")}</p>
         </div>
       </article>
     </a>
