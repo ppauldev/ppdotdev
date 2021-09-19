@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import PostHeader from "../PostHeader"
+
 import Post from "../Post"
 
 import "../styles/post_template.css"
