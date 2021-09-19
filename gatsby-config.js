@@ -9,6 +9,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
     "gatsby-plugin-tslint",
     {

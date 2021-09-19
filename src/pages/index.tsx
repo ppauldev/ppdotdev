@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 
 import fetch from "cross-fetch"
 
@@ -20,6 +21,10 @@ const client = new ApolloClient({
 const App: React.FC = (): React.ReactElement => {
   return (
     <ApolloProvider client={client}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>phillippaul.dev | Clean code, testing, research, RPA</title>
+      </Helmet>
       <Webview />
     </ApolloProvider>
   )
