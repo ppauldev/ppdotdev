@@ -18,7 +18,7 @@ const PostHeader: React.FC<IPostHeader> = ({ keywords }): React.ReactElement => 
         <p>Tags:</p>
         {keywords.map((keyword) => {
           return (
-            <TechTag keyword={keyword} />
+            <TechTag key={keyword} keyword={keyword} />
           )
         })}
       </div>
