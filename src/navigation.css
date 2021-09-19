@@ -27,11 +27,12 @@
 
 #special {
   color: rgb(110, 110, 110);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 #special:hover {
   color: rgb(36, 36, 36);
+  border-bottom: none;
 }
 
 header {
@@ -52,8 +53,10 @@ nav {
 }
 
 nav ul {
+  align-items: center;
   display: flex;
   flex-direction: row-reverse;
+  height: 64px;
   justify-content: space-evenly;
   list-style: none;
   margin: 0 120px 0 60px;
@@ -62,17 +65,18 @@ nav ul {
 }
 
 nav ul li {
+  border: 1px solid transparent;
   color: rgb(110, 110, 110);
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1.2rem;
-  height: 60px;
+  font-size: 0.9rem;
+  height: 44px;
   transition: all 0.1s ease-out;
 }
 
 nav ul li:hover{
-  color: rgb(36, 36, 36);
+  border-bottom: 1px solid rgb(36, 36, 36);
   cursor: pointer;
   transition: all 0.1s ease-in
 }

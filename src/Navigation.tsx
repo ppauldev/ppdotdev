@@ -41,7 +41,7 @@ const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement 
         onClick={handleSelectPostType}
         value={attributeValue}
       >
-        {attributeValue !== "bookscoffee" ? textValue : <Emoji text=":books: + :coffee:" />}
+        {attributeValue !== "bookscoffee" ? textValue : <Emoji text=":books: :coffee:" />}
       </li>
     )
   })
