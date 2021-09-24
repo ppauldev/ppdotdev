@@ -23,3 +23,13 @@ div.post-content-markdown {
   margin-top: 60px;
   text-align: justify;
 }
+
+pre code {
+  display: block;
+  background: #2d2d2d;
+  color: #cccccc;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
