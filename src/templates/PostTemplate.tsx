@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import { RichTextContent } from "@graphcms/rich-text-types"
+
 import PostHeader from "../PostHeader"
 
 import Post from "../Post"
@@ -15,11 +17,13 @@ interface IPost {
 }
 
 interface IPostProps {
+  author: string,
   slug: string,
   title: string,
   date: Date,
   preview: string,
   body: string,
+  rtBody: { raw: RichTextContent },
   type: string,
 }
 

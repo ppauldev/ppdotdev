@@ -24,7 +24,7 @@ div.post-content-markdown {
   text-align: justify;
 }
 
-pre code {
+pre {
   background: #2d2d2d;
   border: 1px solid #ccc;
   color: #cccccc;

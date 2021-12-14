@@ -6,9 +6,11 @@ const GRAPH_CMS_PAGE_QUERY_RAW = `
     graph_cms {
       posts {
         id
+        author
         title
         date
         body
+        rtBody { raw }
         slug
         type
       }
@@ -23,6 +25,7 @@ const GRAPH_CMS_GRID_QUERY_RAW = `
       title
       date
       body
+      rtBody { raw }
       preview
       slug
       type
