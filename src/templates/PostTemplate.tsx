@@ -15,6 +15,7 @@ interface IPost {
 }
 
 interface IPostProps {
+  author: string,
   slug: string,
   title: string,
   date: Date,

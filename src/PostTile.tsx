@@ -13,8 +13,6 @@ interface IPostTileProps {
   title: string,
   date: Date,
   preview: string,
-  body: string,
-  type: string,
 }
 
 const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {

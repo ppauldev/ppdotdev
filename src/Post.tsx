@@ -9,25 +9,45 @@ interface IPost {
 }
 
 interface IPostProps {
-  slug: string,
+  author: string,
   title: string,
   date: Date,
-  preview: string,
   body: string,
-  type: string,
+}
+
+interface IPostIntroProps {
+  author: string,
+  title: string,
+  date: Date,
+}
+
+interface IPostMarkdownProps {
+  rtbody: string,
 }
 
 const Post: React.FC<IPost> = ({ post }): React.ReactElement => {
   return (
     <article className="post">
       <div className="post-content">
-        <div className="post-content-intro">
-          <div className="post-info">{"Phillip Paul"} · {moment(post.date).format("LL")}</div>
-          <h1>{post.title}</h1>
-        </div>
-        <div className="post-content-markdown" dangerouslySetInnerHTML={{ __html: post.body }} />
+        <PostIntro author={post.author} date={post.date} title={post.title} />
+        <PostMarkdown rtbody={post.body} />
       </div>
     </article>
+  )
+}
+
+const PostIntro: React.FC<IPostIntroProps> = ({ author, date, title }): React.ReactElement => {
+  return (
+    <div className="post-content-intro">
+      <div className="post-info">{author} · {moment(date).format("LL")}</div>
+      <h1>{title}</h1>
+    </div>
+  )
+}
+
+const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtbody }): React.ReactElement => {
+  return (
+    <div className="post-content-markdown" dangerouslySetInnerHTML={{ __html: rtbody }} />
   )
 }
 

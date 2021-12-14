@@ -6,6 +6,7 @@ const GRAPH_CMS_PAGE_QUERY_RAW = `
     graph_cms {
       posts {
         id
+        author
         title
         date
         body
