@@ -32,7 +32,7 @@ interface IPostIntroProps {
 }
 
 interface IPostMarkdownProps {
-  rtBodyRaw: RichTextContent,
+  rtBody: { raw: RichTextContent },
 }
 
 const Post: React.FC<IPost> = ({ post }): React.ReactElement => {
@@ -40,7 +40,7 @@ const Post: React.FC<IPost> = ({ post }): React.ReactElement => {
     <article className="post">
       <div className="post-content">
         <PostIntro author={post.author} date={post.date} title={post.title} />
-        <PostMarkdown rtBodyRaw={post.rtBody.raw} />
+        <PostMarkdown rtBody={post.rtBody} />
       </div>
     </article>
   )
@@ -55,14 +55,14 @@ const PostIntro: React.FC<IPostIntroProps> = ({ author, date, title }): React.Re
   )
 }
 
-const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBodyRaw }): React.ReactElement => {
+const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBody }): React.ReactElement => {
   React.useEffect(() => {
     Prism.highlightAll()
   }, [])
 
   return (
     <RichText
-      content={rtBodyRaw}
+      content={rtBody?.raw}
       renderers={{
         code_block: ({ children }) => {
           return (
