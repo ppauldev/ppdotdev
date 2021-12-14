@@ -56,6 +56,10 @@ const PostIntro: React.FC<IPostIntroProps> = ({ author, date, title }): React.Re
 }
 
 const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBody }): React.ReactElement => {
+  if (!rtBody) {
+    return (<NoContent />)
+  }
+
   React.useEffect(() => {
     Prism.highlightAll()
   }, [])
@@ -73,6 +77,12 @@ const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBody }): React.ReactElem
         },
       }}
     />
+  )
+}
+
+const NoContent: React.FC = (): React.ReactElement => {
+  return (
+    <p>No content published yet.</p>
   )
 }
 
