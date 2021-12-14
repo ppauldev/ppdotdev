@@ -2,8 +2,15 @@ import * as React from "react"
 
 import moment from "moment"
 
+// See: https://github.com/GraphCMS/rich-text/tree/main/packages/react-renderer#code-blocks-with-prismjs
+import Prism from "prismjs"
+import "prismjs/plugins/line-numbers/prism-line-numbers"
+import "prismjs/plugins/line-numbers/prism-line-numbers.css"
+
 import { RichText } from "@graphcms/rich-text-react-renderer"
 import { RichTextContent } from "@graphcms/rich-text-types"
+
+import "./styles/custom-prism-vsc-dark-plus.css"
 
 import "./styles/post.css"
 
@@ -49,8 +56,23 @@ const PostIntro: React.FC<IPostIntroProps> = ({ author, date, title }): React.Re
 }
 
 const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBodyRaw }): React.ReactElement => {
+  React.useEffect(() => {
+    Prism.highlightAll()
+  }, [])
+
   return (
-    <RichText content={rtBodyRaw} />
+    <RichText
+      content={rtBodyRaw}
+      renderers={{
+        code_block: ({ children }) => {
+          return (
+            <pre className="line-numbers language-javascript">
+              <code>{children}</code>
+            </pre>
+          );
+        },
+      }}
+    />
   )
 }
 
