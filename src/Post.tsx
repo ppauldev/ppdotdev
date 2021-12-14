@@ -2,6 +2,9 @@ import * as React from "react"
 
 import moment from "moment"
 
+import { RichText } from "@graphcms/rich-text-react-renderer"
+import { RichTextContent } from "@graphcms/rich-text-types"
+
 import "./styles/post.css"
 
 interface IPost {
@@ -12,7 +15,7 @@ interface IPostProps {
   author: string,
   title: string,
   date: Date,
-  body: string,
+  rtBody: { raw: RichTextContent },
 }
 
 interface IPostIntroProps {
@@ -22,7 +25,7 @@ interface IPostIntroProps {
 }
 
 interface IPostMarkdownProps {
-  rtbody: string,
+  rtBodyRaw: RichTextContent,
 }
 
 const Post: React.FC<IPost> = ({ post }): React.ReactElement => {
@@ -30,7 +33,7 @@ const Post: React.FC<IPost> = ({ post }): React.ReactElement => {
     <article className="post">
       <div className="post-content">
         <PostIntro author={post.author} date={post.date} title={post.title} />
-        <PostMarkdown rtbody={post.body} />
+        <PostMarkdown rtBodyRaw={post.rtBody.raw} />
       </div>
     </article>
   )
@@ -45,9 +48,9 @@ const PostIntro: React.FC<IPostIntroProps> = ({ author, date, title }): React.Re
   )
 }
 
-const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtbody }): React.ReactElement => {
+const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBodyRaw }): React.ReactElement => {
   return (
-    <div className="post-content-markdown" dangerouslySetInnerHTML={{ __html: rtbody }} />
+    <RichText content={rtBodyRaw} />
   )
 }
 
