@@ -11,6 +11,12 @@
   background-size: contain;
 }
 
+.electron {
+	background: url("../images/tech_tags/electron_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .git {
 	background: url("../images/tech_tags/git_icon.webp");
 	background-repeat: no-repeat;
@@ -73,6 +79,12 @@
 
 .react {
 	background: url("../images/tech_tags/react_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.redis {
+	background: url("../images/tech_tags/redis_icon.webp");
 	background-repeat: no-repeat;
   background-size: contain;
 }
