@@ -1,11 +1,12 @@
 import * as React from "react"
+
 import { Helmet } from "react-helmet"
 
 import fetch from "cross-fetch"
 
 import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from "@apollo/client"
 
-import Webview from "../Webview"
+import Webview from "../components/start/Webview"
 
 import "@fontsource/abeezee"
 

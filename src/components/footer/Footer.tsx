@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { LogoGithub, LogoLinkedin, Mail } from "react-ionicons"
 
-import "./styles/footer.css"
+import "../../styles/footer.css"
 
 const Footer: React.FC = (): React.ReactElement => {
   return (
