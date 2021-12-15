@@ -1,13 +1,18 @@
-button.tech-tag {
-  background-color: white;
-	border-radius: 16px;
-	border: 1px solid #566963;
-  cursor: default;
-	color: black;
-	display: inline-block;
-	font-family: Arial;
-	font-size: 10px;
-  margin: 2px;
-  padding: 8px 16px;
-	text-decoration: none;
+.tech-tag {
+  border-radius: 2px;
+	margin-right: 4px;
+	width: 24px;
+	height: 24px;
+}
+
+.javascript {
+	background: url("../images/tech_tags/javascript_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.typescript {
+	background: url("../images/tech_tags/typescript_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
 }
