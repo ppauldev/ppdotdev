@@ -10,26 +10,42 @@ interface IPostHeader {
   keywords: string[],
 }
 
+interface ITagsList {
+  keywords: string[],
+}
+
 const PostHeader: React.FC<IPostHeader> = ({ keywords }): React.ReactElement => {
+  return (
+    <header className="post-template-header">
+      <Logo />
+      <TagsList keywords={keywords} />
+    </header>
+  )
+}
+
+const Logo: React.FC = (): React.ReactElement => {
   const handleNavigate = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault()
     navigate("/")
   }
 
   return (
-    <header className="post-template-header">
-      <div id="logo-wrapper">
-        <div id="logo" onClick={handleNavigate} />
-      </div>
-      <div className="post-template-header-keywords">
-        <p>Tags:</p>
-        {keywords.map((keyword) => {
-          return (
-            <TechTag key={keyword} keyword={keyword} />
-          )
-        })}
-      </div>
-    </header>
+    <div id="logo-wrapper">
+      <div id="logo" onClick={handleNavigate} />
+    </div>
+  )
+}
+
+const TagsList: React.FC<ITagsList> = ({ keywords }): React.ReactElement => {
+  return (
+    <div className="post-template-header-keywords">
+      <p>Tags:</p>
+      {keywords.map((keyword) => {
+        return (
+          <TechTag key={keyword} keyword={keyword} />
+        )
+      })}
+    </div>
   )
 }
 
