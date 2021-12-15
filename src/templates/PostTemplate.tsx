@@ -25,6 +25,7 @@ interface IPostProps {
   body: string,
   rtBody: { raw: RichTextContent },
   type: string,
+  tags: string[]
 }
 
 export default ({ pageContext }: IPageContext): React.ReactElement => {
@@ -32,7 +33,7 @@ export default ({ pageContext }: IPageContext): React.ReactElement => {
 
   return (
     <div className="post-template">
-      <PostHeader keywords={["JavaScript", "TypeScript"]} />
+      <PostHeader keywords={post.tags} />
       <Post post={post} />
     </div>
   )

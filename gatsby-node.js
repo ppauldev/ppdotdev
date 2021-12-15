@@ -13,6 +13,7 @@ const GRAPH_CMS_PAGE_QUERY_RAW = `
         rtBody { raw }
         slug
         type
+        tags
       }
     }
   }
@@ -29,6 +30,7 @@ const GRAPH_CMS_GRID_QUERY_RAW = `
       preview
       slug
       type
+      tags
     }
   }
 `
