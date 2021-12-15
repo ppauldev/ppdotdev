@@ -17,6 +17,12 @@
   background-size: contain;
 }
 
+.gatsby {
+	background: url("../images/tech_tags/gatsby_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .git {
 	background: url("../images/tech_tags/git_icon.webp");
 	background-repeat: no-repeat;

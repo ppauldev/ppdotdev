@@ -5,6 +5,9 @@ export const techTagInfo: { [index: string]: any } = {
   electron: {
     url: "https://www.electronjs.org/",
   },
+  gatsby: {
+    url: "https://www.gatsbyjs.com/",
+  },
   git: {
     url: "https://www.git-scm.com/",
   },
