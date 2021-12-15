@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import { techTagInfo } from "./helper/techTagInfo"
+
 import "./styles/tech_tag.css"
 
 interface ITechTag {
@@ -7,8 +9,12 @@ interface ITechTag {
 }
 
 const TechTag: React.FC<ITechTag> = ({ keyword }): React.ReactElement => {
+  const normalizedKeyword = keyword.toLowerCase()
+  const techTagClassName = `tech-tag ${normalizedKeyword}`
+  const techTagUrl = techTagInfo[normalizedKeyword]?.url
+
   return (
-    <button className="tech-tag">{keyword}</button>
+    <a className={techTagClassName} href={techTagUrl} />
   )
 }
 

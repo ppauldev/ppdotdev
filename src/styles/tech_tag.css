@@ -1,13 +1,108 @@
-button.tech-tag {
-  background-color: white;
-	border-radius: 16px;
-	border: 1px solid #566963;
-  cursor: default;
-	color: black;
-	display: inline-block;
-	font-family: Arial;
-	font-size: 10px;
-  margin: 2px;
-  padding: 8px 16px;
-	text-decoration: none;
+.tech-tag {
+  border-radius: 2px;
+	margin-right: 4px;
+	width: 24px;
+	height: 24px;
+}
+
+.css3 {
+	background: url("../images/tech_tags/css3_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.electron {
+	background: url("../images/tech_tags/electron_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gatsby {
+	background: url("../images/tech_tags/gatsby_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.git {
+	background: url("../images/tech_tags/git_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.github {
+	background: url("../images/tech_tags/github_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.heroku {
+	background: url("../images/tech_tags/heroku_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.html5 {
+	background: url("../images/tech_tags/html5_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.javascript {
+	background: url("../images/tech_tags/javascript_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mongodb {
+	background: url("../images/tech_tags/mongodb_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nodejs {
+	background: url("../images/tech_tags/nodejs_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.npm {
+	background: url("../images/tech_tags/npm_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.postgresql {
+	background: url("../images/tech_tags/postgresql_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.python {
+	background: url("../images/tech_tags/python_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.react {
+	background: url("../images/tech_tags/react_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.redis {
+	background: url("../images/tech_tags/redis_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.typescript {
+	background: url("../images/tech_tags/typescript_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.vuejs {
+	background: url("../images/tech_tags/vuejs_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
 }
