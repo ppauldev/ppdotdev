@@ -9,13 +9,13 @@
 }
 
 #logo {
-  background: url("../images/73974310.webp");
+  background: url("../images/logo_ppdotdev.webp");
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 6px;
   filter: saturate(0.3);
-  height: 53px;
-  width: 52px;
+  height: 50px;
+  width: 50px;
 }
 
 #logo:hover {
