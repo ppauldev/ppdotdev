@@ -2,7 +2,9 @@ import * as React from "react"
 
 import Emoji from "react-emoji-render";
 
-import "./styles/navigation.css"
+import Logo from "./Logo"
+
+import "../../styles/navigation.css"
 
 const navigationItems: string[][] = Object.entries({
   // attributeValue: textValue //
@@ -48,9 +50,7 @@ const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement 
 
   return (
     <header>
-      <div id="logo-wrapper">
-        <div id="logo" />
-      </div>
+      <Logo />
       <nav>
         <ul>
           {listElements}

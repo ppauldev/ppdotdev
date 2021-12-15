@@ -1,10 +1,10 @@
 import * as React from "react"
 
-import { navigate } from "gatsby-link"
+import Logo from "../../header/Logo"
 
 import TechTag from "./TechTag"
 
-import "./styles/post_header.css"
+import "../../../styles/post_header.css"
 
 interface IPostHeader {
   keywords: string[],
@@ -20,19 +20,6 @@ const PostHeader: React.FC<IPostHeader> = ({ keywords }): React.ReactElement => 
       <Logo />
       <TagsList keywords={keywords} />
     </header>
-  )
-}
-
-const Logo: React.FC = (): React.ReactElement => {
-  const handleNavigate = (event: React.MouseEvent<HTMLElement>) => {
-    event.preventDefault()
-    navigate("/")
-  }
-
-  return (
-    <div id="logo-wrapper">
-      <div id="logo" onClick={handleNavigate} />
-    </div>
   )
 }
 

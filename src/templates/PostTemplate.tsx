@@ -2,9 +2,9 @@ import * as React from "react"
 
 import { RichTextContent } from "@graphcms/rich-text-types"
 
-import PostHeader from "../PostHeader"
+import PostHeader from "../components/post/header/PostHeader"
 
-import Post from "../Post"
+import Post from "../components/post/main/Post"
 
 import "../styles/post_template.css"
 
