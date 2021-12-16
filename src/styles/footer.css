@@ -2,10 +2,12 @@ footer {
   align-items: center;
   background-color: whitesmoke;
   border-top: 1px solid lightgrey;
+  clear: both;
   display: flex;
   flex-direction: row;
-  height: 60px;
+  min-height: 60px;
   justify-content: center;
+  position: relative;
 }
 
 footer > div {
