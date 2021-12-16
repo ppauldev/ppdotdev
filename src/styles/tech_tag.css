@@ -1,6 +1,6 @@
 .tech-tag {
   border-radius: 2px;
-	margin-right: 4px;
+	margin-right: 10px;
 	width: 24px;
 	height: 24px;
 }
@@ -49,6 +49,18 @@
 
 .javascript {
 	background: url("../images/tech_tags/javascript_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.linkedin {
+	background: url("../images/tech_tags/linkedin_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mail {
+	background: url("../images/tech_tags/mail_icon.webp");
 	background-repeat: no-repeat;
   background-size: contain;
 }
