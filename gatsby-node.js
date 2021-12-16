@@ -14,6 +14,11 @@ const GRAPH_CMS_PAGE_QUERY_RAW = `
         slug
         type
         tags
+        image {
+          url
+        }
+        imageSource
+        imageLicense
       }
     }
   }
@@ -31,6 +36,11 @@ const GRAPH_CMS_GRID_QUERY_RAW = `
       slug
       type
       tags
+      image {
+        url
+      }
+      imageSource
+      imageLicense
     }
   }
 `
