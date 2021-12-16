@@ -17,6 +17,9 @@ interface IPostTileProps {
   preview: string,
   body: string,
   type: string,
+  image: { url: string },
+  imageSource: string,
+  imageLicense: string,
 }
 
 const GRAPH_CMS_GRID_QUERY = graphql`
@@ -30,6 +33,15 @@ const GRAPH_CMS_GRID_QUERY = graphql`
         preview
         slug
         type
+        image {
+          url(
+            transformation: {
+              image: {resize: {width: 600, height: 400, fit: clip}}
+            }
+          )
+        }
+        imageSource
+        imageLicense
       }
     }
   }

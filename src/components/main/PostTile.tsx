@@ -13,13 +13,21 @@ interface IPostTileProps {
   title: string,
   date: Date,
   preview: string,
+  image: { url: string },
+  imageSource: string,
+  imageLicense: string,
 }
 
 const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {
   return (
     <a href={post.slug} className="post-tile-slug">
       <article className="post-tile">
-        <div className="post-tile-image" />
+        <div
+          className="post-tile-image"
+          style={{ background: `url(${post?.image?.url}) 50% / 100%` }}
+          data-imagesource={post?.imageSource}
+          data-imagelicense={post?.imageLicense}
+        />
         <div className="post-tile-content">
           <div className="post-tile-content-main">
             <h2>{post.title}</h2>
