@@ -7,7 +7,7 @@ div.post-content {
 }
 
 div.post-content-intro {
-  border-bottom: 1px solid lightgrey;
+  margin-bottom: 80px;
 }
 
 div.post-info {
@@ -22,16 +22,4 @@ div.post-content-intro h1 {
 div.post-content-markdown {
   margin-top: 60px;
   text-align: justify;
-}
-
-pre {
-  background: #2d2d2d;
-  border: 1px solid #ccc;
-  color: #cccccc;
-  display: block;
-  font-family: Menlo, Monaco, Consolas, monospace;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  margin: 40px 0 40px 0;
-  padding: 10px;
 }

@@ -24,7 +24,7 @@ const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {
       <article className="post-tile">
         <div
           className="post-tile-image"
-          style={{ background: `url(${post?.image?.url}) 80% / 100%` }}
+          style={{ background: `url(${post?.image?.url}) 50% / 100%` }}
           data-imagesource={post?.imageSource}
           data-imagelicense={post?.imageLicense}
         />
