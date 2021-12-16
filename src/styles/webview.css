@@ -3,3 +3,9 @@
   margin: 0;
   padding: 0;
 }
+
+div.webview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

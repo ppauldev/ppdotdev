@@ -12,7 +12,7 @@ const Webview: React.FC = (): React.ReactElement => {
   const [postType, setPostType] = React.useState("")
 
   return (
-    <div>
+    <div className="webview">
       <Navigation setPostType={setPostType} />
       <Content postType={postType} />
       <Footer />
