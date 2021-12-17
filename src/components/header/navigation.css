@@ -9,7 +9,7 @@
 }
 
 #logo {
-  background: url("../images/logo_ppdotdev.webp");
+  background: url("../../images/logo_ppdotdev.webp");
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 6px;
@@ -48,7 +48,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   margin: 0 0 0 0;
-  width: calc(100% - 110px);
+  width: calc(100% - 140px);
 }
 
 nav ul {

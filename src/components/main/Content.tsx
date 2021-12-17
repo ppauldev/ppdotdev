@@ -2,7 +2,7 @@ import * as React from "react"
 
 import PostsGrid from "./PostsGrid"
 
-import "../../styles/content.css"
+import "./content.css"
 
 interface IContent {
   postType: string,

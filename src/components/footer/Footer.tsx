@@ -2,7 +2,7 @@ import * as React from "react"
 
 import TechTag from "../post/header/TechTag"
 
-import "../../styles/footer.css"
+import "./footer.css"
 
 const Footer: React.FC = (): React.ReactElement => {
   return (

@@ -2,7 +2,7 @@ import * as React from "react"
 
 import moment from "moment"
 
-import "../../styles/post_tile.css"
+import "./post_tile.css"
 
 interface IPostTile {
   post: IPostTileProps

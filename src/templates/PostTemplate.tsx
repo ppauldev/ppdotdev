@@ -6,7 +6,7 @@ import PostHeader from "../components/post/header/PostHeader"
 
 import Post from "../components/post/main/Post"
 
-import "../styles/post_template.css"
+import "./post_template.css"
 
 interface IPageContext {
   pageContext: IPost,
