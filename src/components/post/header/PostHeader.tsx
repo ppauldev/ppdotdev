@@ -4,7 +4,7 @@ import Logo from "../../header/Logo"
 
 import TechTag from "./TechTag"
 
-import "../../../styles/post_header.css"
+import "./post_header.css"
 
 interface IPostHeader {
   keywords: string[],

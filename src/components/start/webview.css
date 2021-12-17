@@ -1,0 +1,25 @@
+* {
+  font-family: "ABeeZee";
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: grey
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+div.webview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

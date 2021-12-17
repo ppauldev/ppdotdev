@@ -10,9 +10,9 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 import { RichText } from "@graphcms/rich-text-react-renderer"
 import { RichTextContent } from "@graphcms/rich-text-types"
 
-import "../../../styles/custom-prism-vsc-dark-plus.css"
+import "./custom-prism-vsc-dark-plus.css"
 
-import "../../../styles/post.css"
+import "./post.css"
 
 interface IPost {
   post: IPostProps
