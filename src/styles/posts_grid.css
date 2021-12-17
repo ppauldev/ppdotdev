@@ -8,7 +8,7 @@ section {
 
 section::after {
   content: "";
-  margin-left: 370px;
+  margin-left: 410px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 428px) {
@@ -23,9 +23,9 @@ section::after {
   }
 }
 
-@media only screen and (min-width: 600) and (max-width: 1140px) {
+@media only screen and (min-width: 600px) and (max-width: 1140px) {
   section {
-    min-width: 600px;
+    min-width: 560px;
   }
 }
 
