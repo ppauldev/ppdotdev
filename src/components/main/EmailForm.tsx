@@ -14,17 +14,17 @@ const EmailForm: React.FC = (): React.ReactElement => {
             <div className="middle-contact-area">
               <div className="email-area">
                 <p>Email</p>
-                <input type="email" name="email" placeholder="Your email" required />
+                <input type="email" name="email" placeholder="Your email" required={true} />
               </div>
               <div className="name-area">
                 <p>Name</p>
-                <input type="text" name="name" placeholder="Your name" required />
+                <input type="text" name="name" placeholder="Your name" required={true} />
               </div>
             </div>
             <div className="topic-area">
               <p>Topic</p>
-              <select name="topic" required>
-                <option value="" disabled selected>Please select ..</option>
+              <select name="topic" required={true}>
+                <option value="" disabled={true} selected={true}>Please select ..</option>
                 <option value="general-question">General question</option>
                 <option value="content">Content request</option>
                 <option value="project">Project inquiry</option>
@@ -34,7 +34,7 @@ const EmailForm: React.FC = (): React.ReactElement => {
             </div>
             <div className="message-area">
               <p>Message</p>
-              <textarea name="message" required />
+              <textarea name="message" required={true} />
             </div>
             <div className="button-area">
               <input type="submit" value="Send" />

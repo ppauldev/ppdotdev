@@ -17,11 +17,7 @@ const Webview: React.FC = (): React.ReactElement => {
       <Navigation postType={postType} setPostType={setPostType} />
       {postType !== "email"
         ? <Content postType={postType} />
-        : null
-      }
-      {postType === "email"
-        ? <EmailForm />
-        : null
+        : <EmailForm />
       }
       <Footer setPostType={setPostType} />
     </div>
