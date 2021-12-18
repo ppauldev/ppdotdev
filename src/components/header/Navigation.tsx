@@ -1,7 +1,5 @@
 import * as React from "react"
 
-import Emoji from "react-emoji-render";
-
 import Logo from "./Logo"
 
 import "./navigation.css"
@@ -47,7 +45,7 @@ const Navigation: React.FC<INavigation> = ({ postType, setPostType }): React.Rea
         onClick={handleSelectPostType}
         value={attributeValue}
       >
-        {attributeValue !== "bookscoffee" ? textValue : <Emoji text=":books: :coffee:" />}
+        {attributeValue !== "bookscoffee" ? textValue : "📚 ☕"}
       </li>
     )
   })
