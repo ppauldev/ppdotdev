@@ -23,7 +23,7 @@ const EmailForm: React.FC = (): React.ReactElement => {
             </div>
             <div className="topic-area">
               <p>Topic</p>
-              <select required>
+              <select name="topic" required>
                 <option value="" disabled selected>Please select ..</option>
                 <option value="general-question">General question</option>
                 <option value="content">Content request</option>
@@ -34,7 +34,7 @@ const EmailForm: React.FC = (): React.ReactElement => {
             </div>
             <div className="message-area">
               <p>Message</p>
-              <input type="text" name="message" required />
+              <textarea name="message" required />
             </div>
             <div className="button-area">
               <input type="submit" value="Send" />

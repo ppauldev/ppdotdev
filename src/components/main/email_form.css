@@ -71,7 +71,7 @@
   width: 80%;
 }
 
-.message-area input {
+.message-area textarea {
   height: 80%;
   width: 100%;
 }
