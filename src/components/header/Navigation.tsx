@@ -16,21 +16,25 @@ const navigationItems: string[][] = Object.entries({
 })
 
 interface INavigation {
+  postType: string,
   setPostType: (args: string) => void,
 }
 
-const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement => {
+const Navigation: React.FC<INavigation> = ({ postType, setPostType }): React.ReactElement => {
   const [activeElement, setActiveElement] = React.useState("research")
 
   React.useEffect(() => {
     setPostType("research")
   }, [])
 
-  const handleSelectPostType: React.MouseEventHandler = (e: React.MouseEvent<HTMLElement>) => {
-    const value: string | null = (e.target as HTMLElement).getAttribute("value")!
+  React.useEffect(() => {
+    setActiveElement(postType)
+  }, [postType])
+
+  const handleSelectPostType: React.MouseEventHandler = (event: React.MouseEvent<HTMLElement>) => {
+    const value: string | null = (event.target as HTMLElement).getAttribute("value")!
 
     setPostType(value)
-    setActiveElement(value)
   }
 
   const listElements = navigationItems.map((item: string[]) => {
@@ -50,7 +54,7 @@ const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement 
 
   return (
     <header>
-      <Logo />
+      <Logo setPostType={setPostType} />
       <nav>
         <ul>
           {listElements}

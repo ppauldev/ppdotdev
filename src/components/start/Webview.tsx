@@ -5,6 +5,7 @@ import Footer from "../footer/Footer"
 import Navigation from "../header/Navigation"
 
 import Content from "../main/Content"
+import EmailForm from "../main/EmailForm"
 
 import "./webview.css"
 
@@ -13,8 +14,15 @@ const Webview: React.FC = (): React.ReactElement => {
 
   return (
     <div className="webview">
-      <Navigation setPostType={setPostType} />
-      <Content postType={postType} />
+      <Navigation postType={postType} setPostType={setPostType} />
+      {postType !== "email"
+        ? <Content postType={postType} />
+        : null
+      }
+      {postType === "email"
+        ? <EmailForm />
+        : null
+      }
       <Footer setPostType={setPostType} />
     </div>
   )

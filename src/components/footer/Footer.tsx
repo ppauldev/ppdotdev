@@ -9,9 +9,8 @@ interface IFooter {
 }
 
 const Footer: React.FC<IFooter> = ({ setPostType }): React.ReactElement => {
-  const viewEmailForm = (event) => {
+  const viewEmailForm = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
-    console.log("view email form: ", event.target)
     setPostType("email")
   }
 
