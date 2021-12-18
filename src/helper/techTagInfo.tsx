@@ -33,7 +33,7 @@ export const techTagInfo: { [index: string]: any } = {
   },
   linkedin: {
     imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
-    url: "",
+    url: "http://go.phillippaul.dev/linkedin",
   },
   mail: {
     imageSource: "https://icon-icons.com/de/symbol/E-Mail-envelope-mail-message/114031",

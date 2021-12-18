@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import EmailForm from "./EmailForm"
+
 import PostsGrid from "./PostsGrid"
 
 import "./content.css"
@@ -11,7 +13,14 @@ interface IContent {
 const Content: React.FC<IContent> = ({ postType }): React.ReactElement => {
   return (
     <main>
-      <PostsGrid postType={postType} />
+      {postType !== "email"
+        ? <PostsGrid postType={postType} />
+        : null
+      }
+      {postType === "email"
+        ? <EmailForm />
+        : null
+      }
     </main>
   )
 }

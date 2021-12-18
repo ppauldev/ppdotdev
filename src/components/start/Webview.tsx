@@ -15,7 +15,7 @@ const Webview: React.FC = (): React.ReactElement => {
     <div className="webview">
       <Navigation setPostType={setPostType} />
       <Content postType={postType} />
-      <Footer />
+      <Footer setPostType={setPostType} />
     </div>
   )
 }
