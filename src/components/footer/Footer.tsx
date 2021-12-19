@@ -4,7 +4,16 @@ import TechTag from "../post/header/TechTag"
 
 import "./footer.css"
 
-const Footer: React.FC = (): React.ReactElement => {
+interface IFooter {
+  setPostType: (args: string) => void,
+}
+
+const Footer: React.FC<IFooter> = ({ setPostType }): React.ReactElement => {
+  const viewEmailForm = (event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    setPostType("email")
+  }
+
   return (
     <footer>
       <div>
@@ -17,7 +26,9 @@ const Footer: React.FC = (): React.ReactElement => {
           <div className="tech-tags">
             <TechTag key="github" keyword="github" />
             <TechTag key="linkedin" keyword="linkedin" />
-            <TechTag key="mail" keyword="mail" />
+            <div id="link-mail-form" onClick={viewEmailForm}>
+              <TechTag key="mail" keyword="mail" />
+            </div>
           </div>
         </div>
         <div id="footer-break">|</div>

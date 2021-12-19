@@ -2,10 +2,15 @@ import * as React from "react"
 
 import { navigate } from "gatsby-link"
 
-const Logo: React.FC = (): React.ReactElement => {
+interface ILogo {
+  setPostType: (args: string) => void,
+}
+
+const Logo: React.FC<ILogo> = ({ setPostType }): React.ReactElement => {
   const handleNavigate = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault()
     navigate("/")
+    setPostType("research")
   }
 
   return (

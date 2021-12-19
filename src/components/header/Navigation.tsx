@@ -1,7 +1,5 @@
 import * as React from "react"
 
-import Emoji from "react-emoji-render";
-
 import Logo from "./Logo"
 
 import "./navigation.css"
@@ -16,21 +14,25 @@ const navigationItems: string[][] = Object.entries({
 })
 
 interface INavigation {
+  postType: string,
   setPostType: (args: string) => void,
 }
 
-const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement => {
+const Navigation: React.FC<INavigation> = ({ postType, setPostType }): React.ReactElement => {
   const [activeElement, setActiveElement] = React.useState("research")
 
   React.useEffect(() => {
     setPostType("research")
   }, [])
 
-  const handleSelectPostType: React.MouseEventHandler = (e: React.MouseEvent<HTMLElement>) => {
-    const value: string | null = (e.target as HTMLElement).getAttribute("value")!
+  React.useEffect(() => {
+    setActiveElement(postType)
+  }, [postType])
+
+  const handleSelectPostType: React.MouseEventHandler = (event: React.MouseEvent<HTMLElement>) => {
+    const value: string | null = (event.target as HTMLElement).getAttribute("value")!
 
     setPostType(value)
-    setActiveElement(value)
   }
 
   const listElements = navigationItems.map((item: string[]) => {
@@ -43,14 +45,14 @@ const Navigation: React.FC<INavigation> = ({ setPostType }): React.ReactElement 
         onClick={handleSelectPostType}
         value={attributeValue}
       >
-        {attributeValue !== "bookscoffee" ? textValue : <Emoji text=":books: :coffee:" />}
+        {attributeValue !== "bookscoffee" ? textValue : "📚 ☕"}
       </li>
     )
   })
 
   return (
     <header>
-      <Logo />
+      <Logo setPostType={setPostType} />
       <nav>
         <ul>
           {listElements}

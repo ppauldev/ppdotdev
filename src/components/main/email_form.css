@@ -1,0 +1,133 @@
+#email-section {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#email-form-wrapper {
+  height: 600px;
+  width: 700px;
+}
+
+#email-form-wrapper > form {
+  align-items: center;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  color: rgb(110, 110, 110);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: all 0.1s ease-out;
+  width: 100%;
+}
+
+#email-form-wrapper p {
+  margin-bottom: 10px;
+}
+
+.top-contact-area {
+  align-items: center;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: flex-start;
+  height: 14%;
+  width: 80%;
+}
+
+.middle-contact-area {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 15%;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.middle-contact-area > div {
+  margin-right: 30px;
+}
+
+.middle-contact-area input {
+  height: 26px;
+  width: 200px;
+}
+
+.topic-area {
+  height: 15%;
+  width: 80%;
+}
+
+.topic-area select {
+  height: 30px;
+  width: 204px;
+}
+
+.message-area {
+  height: 46%;
+  width: 80%;
+}
+
+.message-area textarea {
+  height: 80%;
+  width: 100%;
+}
+
+.button-area {
+  height: 6%;
+  width: 80%;
+}
+
+.button-area input {
+  height: 34px;
+  width: 68px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  #email-form-wrapper {
+    width: 300px;
+  }
+
+  .middle-contact-area {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 24%;
+    justify-content: center;
+  }
+
+  .middle-contact-area > div {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .message-area {
+    height: 38%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 830px) {
+  #email-form-wrapper {
+    width: 500px;
+  }
+
+  .middle-contact-area {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 24%;
+    justify-content: center;
+  }
+
+  .middle-contact-area > div {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .message-area {
+    height: 38%;
+  }
+}
