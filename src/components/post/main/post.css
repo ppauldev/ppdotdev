@@ -23,3 +23,27 @@ div.post-content-markdown {
   margin-top: 60px;
   text-align: justify;
 }
+
+div.post-image-wrapper {
+  margin-top: 24px;
+}
+
+div.image-source {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+div.image-source > p {
+  color: darkgrey;
+  font-size: 0.6rem;
+  font-style: italic;
+}
+
+div.image-source > p a {
+  color: darkgrey;
+  text-decoration: none;
+}
