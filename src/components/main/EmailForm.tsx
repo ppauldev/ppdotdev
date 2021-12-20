@@ -23,8 +23,8 @@ const EmailForm: React.FC = (): React.ReactElement => {
             </div>
             <div className="topic-area">
               <p>Topic</p>
-              <select name="topic" required={true}>
-                <option value="" disabled={true} selected={true}>Please select ..</option>
+              <select name="topic" required={true} defaultValue="">
+                <option value="" disabled={true}>Please select ..</option>
                 <option value="general-question">General question</option>
                 <option value="content">Content request</option>
                 <option value="project">Project inquiry</option>
