@@ -18,6 +18,11 @@ interface INavigation {
   setPostType: (args: string) => void,
 }
 
+interface ICategoryBar {
+  activeElement: string,
+  setPostType: (args: string) => void,
+}
+
 const Navigation: React.FC<INavigation> = ({ postType, setPostType }): React.ReactElement => {
   const [activeElement, setActiveElement] = React.useState("research")
 
@@ -29,14 +34,24 @@ const Navigation: React.FC<INavigation> = ({ postType, setPostType }): React.Rea
     setActiveElement(postType)
   }, [postType])
 
+  return (
+    <header>
+      <Logo />
+      <CategoryBar activeElement={activeElement} setPostType={setPostType} />
+    </header>
+  )
+}
+
+const CategoryBar: React.FC<ICategoryBar> = ({ activeElement, setPostType }): React.ReactElement => {
   const handleSelectPostType: React.MouseEventHandler = (event: React.MouseEvent<HTMLElement>) => {
     const value: string | null = (event.target as HTMLElement).getAttribute("value")!
 
     setPostType(value)
   }
 
-  const listElements = navigationItems.map((item: string[]) => {
-    const [attributeValue, textValue] = item
+  const listElements: JSX.Element[] = navigationItems.map((item: string[]) => {
+    const [attributeValue, textValue]: string[] = item
+
     return (
       <li
         key={attributeValue}
@@ -51,14 +66,11 @@ const Navigation: React.FC<INavigation> = ({ postType, setPostType }): React.Rea
   })
 
   return (
-    <header>
-      <Logo setPostType={setPostType} />
-      <nav>
-        <ul>
-          {listElements}
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <ul>
+        {listElements}
+      </ul>
+    </nav>
   )
 }
 

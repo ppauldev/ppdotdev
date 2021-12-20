@@ -75,6 +75,13 @@ const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBody }): React.ReactElem
             </pre>
           );
         },
+        img: ({ src, altText }) => {
+          return (
+            <div className="post-image-wrapper">
+              <img src={src} alt={altText} width="100%" />
+            </div>
+          )
+        },
       }}
     />
   )
