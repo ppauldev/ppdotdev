@@ -19,41 +19,6 @@ a.post-tile-slug:hover {
   transition: all 0.1s ease-in;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 428px) {
-  a.post-tile-slug {
-    flex-basis: 260px;
-    height: 500px;
-  }
-}
-
-@media only screen and (min-width: 428px) and (max-width: 600px) {
-  a.post-tile-slug {
-    flex-basis: 320px;
-    height: 500px;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1140px) {
-  a.post-tile-slug {
-    flex-basis: 390px;
-    height: 500px;
-  }
-}
-
-@media only screen and (min-width: 1140px) and (max-width: 1268px) {
-  a.post-tile-slug {
-    flex-basis: 310px;
-    height: 500px;
-  }
-}
-
-@media only screen and (min-width: 1268px) {
-  a.post-tile-slug {
-    flex-basis: 390px;
-    height: 500px;
-  }
-}
-
 article.post-tile {
   height: 100%;
   width: 100%;
@@ -92,4 +57,43 @@ article h2 {
 article h3 {
   font-size: 14px;
   font-weight: normal;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+  a.post-tile-slug {
+    flex-basis: 260px;
+    height: 470px;
+  }
+
+  .post-tile-image {
+    height: 170px;
+  }
+}
+
+@media only screen and (min-width: 428px) and (max-width: 600px) {
+  a.post-tile-slug {
+    flex-basis: 320px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1140px) {
+  a.post-tile-slug {
+    flex-basis: 390px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1268px) {
+  a.post-tile-slug {
+    flex-basis: 310px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1268px) {
+  a.post-tile-slug {
+    flex-basis: 390px;
+    height: 500px;
+  }
 }

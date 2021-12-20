@@ -38,6 +38,7 @@ const Footer: React.FC<IFooter> = ({ setPostType }): React.ReactElement => {
             <TechTag key="react" keyword="react" />
             <TechTag key="typescript" keyword="typescript" />
             <TechTag key="gatsby" keyword="gatsby" />
+            <TechTag key="graphcms" keyword="graphcms" />
           </div>
         </div>
       </div>
