@@ -35,6 +35,12 @@
   background-size: contain;
 }
 
+.graphcms {
+	background: url("../../../images/tech_tags/graphcms_icon.webp");
+	background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .heroku {
 	background: url("../../../images/tech_tags/heroku_icon.webp");
 	background-repeat: no-repeat;

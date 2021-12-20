@@ -19,6 +19,10 @@ export const techTagInfo: { [index: string]: any } = {
     imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
     url: "https://www.github.com/",
   },
+  graphcms: {
+    imageSource: "https://github.com/GraphCMS",
+    url: "https://www.graphcms.com/",
+  },
   heroku: {
     imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
     url: "https://www.heroku.com/",
