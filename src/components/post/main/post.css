@@ -2,12 +2,39 @@ article.post {
   width: 70%;
 }
 
+code:not(.language-javascript) {
+  background: whitesmoke;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  padding: 3px 6px 3px 6px;
+}
+
 div.post-content {
   margin-top: 60px;
 }
 
 div.post-content-intro {
   margin-bottom: 80px;
+}
+
+div.post-content > p {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+div.post-content a {
+  text-decoration: none;
+}
+
+div.post-content > ol,
+div.post-content > ul {
+  margin-left: 50px;
+}
+div.post-content > ol > li,
+div.post-content > ul > li {
+  margin-bottom: 14px;
+  padding-left: 20px;
 }
 
 div.post-info {
