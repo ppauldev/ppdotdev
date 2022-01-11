@@ -37,7 +37,10 @@ article.post-tile {
 }
 
 .post-tile-content-main {
+  display: inline-block;
   height: 240px;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
 
 .post-tile-content-side {
