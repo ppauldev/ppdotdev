@@ -35,7 +35,7 @@
 }
 
 header {
-  background-color: whitesmoke;
+  background-color: white;
   border-bottom: 1px solid lightgrey;
   display: flex;
   flex-direction: row;
