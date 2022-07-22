@@ -3,7 +3,7 @@
 pre[class*="language-"],
 code[class*="language-"] {
 	color: #d4d4d4;
-	font-size: 13px;
+	font-size: 12px;
 	text-shadow: none;
 	font-family: "Menlo", "Monaco", "Consolas", "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
 	direction: ltr;
@@ -11,7 +11,7 @@ code[class*="language-"] {
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
-	line-height: 1.5;
+	line-height: 129%;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -30,6 +30,7 @@ code[class*="language-"] *::selection {
 }
 
 @media print {
+
 	pre[class*="language-"],
 	code[class*="language-"] {
 		text-shadow: none;
@@ -44,12 +45,13 @@ pre[class*="language-"] {
 	background: #1e1e1e;
 }
 
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
 	padding: .1em .3em;
 	border-radius: .3em;
 	color: #db4c69;
 	background: #1e1e1e;
 }
+
 /*********************************************************
 * Tokens
 */
@@ -231,6 +233,7 @@ pre[class*="language-"] {
 .token.namespace {
 	color: #4ec9b0;
 }
+
 /*********************************************************
 * Language Specific
 */
@@ -263,10 +266,11 @@ code[class*="language-html"] {
 .language-html .token.punctuation {
 	color: #808080;
 }
+
 /*********************************************************
 * Line highlighting
 */
-pre[class*="language-"] > code[class*="language-"] {
+pre[class*="language-"]>code[class*="language-"] {
 	position: relative;
 	z-index: 1;
 }
