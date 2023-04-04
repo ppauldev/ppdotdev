@@ -18,7 +18,7 @@ const Footer: React.FC<IFooter> = ({ setPostType }): React.ReactElement => {
     <footer>
       <div>
         <div className="footer-item-wrapper author">
-          <p>© 2021 Phillip Paul</p>
+          <p>© {new Date().getFullYear()} <a href="https://ppauldev.github.io/cv/" hrefLang="en" rel="author" style={{ color: "inherit", textDecoration: "none" }}>Phillip Paul</a></p>
         </div>
         <div id="footer-break">|</div>
         <div className="footer-item-wrapper">
