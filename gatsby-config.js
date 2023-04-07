@@ -20,5 +20,11 @@ module.exports = {
         url: process.env.GATSBY_GRAPH_CMS_API_URL,
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/ppdotdev_icon.svg',
+      },
+    },
   ],
 }
