@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@apollo/client": "3.7.11",
-    "@fontsource/abeezee": "^4.5.0",
+    "@fontsource/roboto": "^4.5.8",
     "@fontsource/architects-daughter": "^4.5.0",
     "@fontsource/lato": "^4.5.0",
     "@graphcms/rich-text-react-renderer": "^0.4.0",
