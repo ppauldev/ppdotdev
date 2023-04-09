@@ -19,6 +19,8 @@ const GRAPH_CMS_PAGE_QUERY_RAW = `
         }
         imageSource
         imageLicense
+        metadescription
+        metakeywords
       }
     }
   }
@@ -41,6 +43,8 @@ const GRAPH_CMS_GRID_QUERY_RAW = `
       }
       imageSource
       imageLicense
+      metadescription
+      metakeywords
     }
   }
 `

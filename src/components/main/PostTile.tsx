@@ -19,22 +19,26 @@ interface IPostTileProps {
 }
 
 const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {
+  const handleOnMouseOver = () => {
+    const img = document.getElementById(`post-tile-image-${post.slug}`)
+    if (img) {
+      img.style.transform = "scale(1.1)"
+    }
+  }
+
+  const handleOnMouseLeave = () => {
+    const img = document.getElementById(`post-tile-image-${post.slug}`)
+    if (img) {
+      img.style.transform = "scale(1)"
+    }
+  }
+
   return (
     <a
       href={post.slug}
       className="post-tile-slug"
-      onMouseOver={() => {
-        const img = document.getElementById(`post-tile-image-${post.slug}`)
-        if (img) {
-          img.style.transform = "scale(1.1)"
-        }
-      }}
-      onMouseLeave={() => {
-        const img = document.getElementById(`post-tile-image-${post.slug}`)
-        if (img) {
-          img.style.transform = "scale(1)"
-        }
-      }}
+      onMouseOver={handleOnMouseOver}
+      onMouseLeave={handleOnMouseLeave}
     >
       <article className="post-tile">
         <div className="post-tile-image-wrapper">
