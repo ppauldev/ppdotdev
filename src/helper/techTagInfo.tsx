@@ -39,6 +39,10 @@ export const techTagInfo: { [index: string]: any } = {
     imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
     url: "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
   },
+  jestjs: {
+    imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
+    url: "https://jestjs.io",
+  },
   linkedin: {
     imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
     url: "http://go.phillippaul.dev/linkedin",
