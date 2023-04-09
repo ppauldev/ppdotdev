@@ -1,4 +1,8 @@
 export const techTagInfo: { [index: string]: any } = {
+  angularjs: {
+    imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
+    url: "https://www.angular.io"
+  },
   css3: {
     imageSource: "https://icon-icons.com/de/pack/Devicon/2415",
     url: "https://www.w3.org/Style/CSS/",
