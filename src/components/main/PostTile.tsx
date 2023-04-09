@@ -22,14 +22,14 @@ const PostTile: React.FC<IPostTile> = ({ post }): React.ReactElement => {
   const handleOnMouseOver = () => {
     const img = document.getElementById(`post-tile-image-${post.slug}`)
     if (img) {
-      img.style.transform = "scale(1.1)"
+      img.style.backgroundSize = "110%"
     }
   }
 
   const handleOnMouseLeave = () => {
     const img = document.getElementById(`post-tile-image-${post.slug}`)
     if (img) {
-      img.style.transform = "scale(1)"
+      img.style.backgroundSize = "100%"
     }
   }
 

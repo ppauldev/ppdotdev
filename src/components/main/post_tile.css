@@ -33,7 +33,7 @@ article.post-tile {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   height: 200px;
-  transition: transform 0.25s;
+  transition: background-size 0.25s;
 }
 
 .post-tile-content {
