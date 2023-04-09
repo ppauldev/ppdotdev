@@ -24,11 +24,16 @@ article.post-tile {
   width: 100%;
 }
 
+.post-tile-image-wrapper {
+  overflow: hidden;
+}
+
 .post-tile-image {
   background-color: darkslategrey;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   height: 200px;
+  transition: transform 0.25s;
 }
 
 .post-tile-content {
@@ -78,7 +83,7 @@ article h3 {
   article h2 {
     font-size: 20px;
   }
-  
+
   article h3 {
     font-size: 12px;
   }
