@@ -65,6 +65,12 @@
 	background-size: contain;
 }
 
+.jestjs {
+	background: url("../../../images/tech_tags/jestjs_icon.webp");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
 .linkedin {
 	background: url("../../../images/tech_tags/linkedin_icon.webp");
 	background-repeat: no-repeat;

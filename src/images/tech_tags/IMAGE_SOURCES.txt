@@ -1,3 +1,7 @@
 Author: Julien Monty
 License: "Free for commercial use" (icon-icons.com)
 Source of icons: https://icon-icons.com/de/pack/Devicon/2415
+
+For "jestjs_icon.webp":
+Source: https://uxwing.com/jest-js-icon/
+License: https://uxwing.com/license/
