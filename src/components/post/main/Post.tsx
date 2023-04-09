@@ -82,11 +82,6 @@ const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBody }): React.ReactElem
             </div>
           )
         },
-        // a: ({ children, className, href, openInNewTab, title }) => {
-        //   return (
-        //     <a href={href} title={title} className={className} target={openInNewTab ? "_blank" : "_self"} >{children}</a>
-        //   )
-        // }
       }}
     />
   )

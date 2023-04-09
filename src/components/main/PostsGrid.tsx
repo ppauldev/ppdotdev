@@ -52,13 +52,13 @@ const PreviewItem = (props: any) => {
   const [loaderWidth, setLoaderWidth] = React.useState(0)
 
   React.useEffect(() => {
-    if (!window) return;
+    if (!window) { return; }
 
-    if (window.innerWidth >= 320 && window.innerWidth < 428) setLoaderWidth(260);
-    if (window.innerWidth >= 428 && window.innerWidth < 600) setLoaderWidth(320);
-    if (window.innerWidth >= 600 && window.innerWidth < 1140) setLoaderWidth(390);
-    if (window.innerWidth >= 1140 && window.innerWidth < 1268) setLoaderWidth(340);
-    if (window.innerWidth >= 1268) setLoaderWidth(390);
+    if (window.innerWidth >= 320 && window.innerWidth < 428) { setLoaderWidth(260) };
+    if (window.innerWidth >= 428 && window.innerWidth < 600) { setLoaderWidth(320) };
+    if (window.innerWidth >= 600 && window.innerWidth < 1140) { setLoaderWidth(390) };
+    if (window.innerWidth >= 1140 && window.innerWidth < 1268) { setLoaderWidth(340) };
+    if (window.innerWidth >= 1268) { setLoaderWidth(390) };
   }, []) // Note: Avoiding resize listener, because of minor use case
 
   return (
