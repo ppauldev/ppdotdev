@@ -21,9 +21,19 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        icon: 'src/assets/ppdotdev_icon.svg',
+        icon: "src/assets/ppdotdev_icon.svg",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-gtag",
+      options: {
+        trackingId: process.env.GATSBY_GOOGLE_GTAG,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Enable IP anonymization
+        anonymize: true,
       },
     },
   ],

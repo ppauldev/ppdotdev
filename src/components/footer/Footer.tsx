@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import { OutboundLink } from "gatsby-plugin-gtag"
+
 import TechTag from "../post/header/TechTag"
 
 import "./footer.css"
@@ -18,7 +20,7 @@ const Footer: React.FC<IFooter> = ({ setPostType }): React.ReactElement => {
     <footer>
       <div>
         <div className="footer-item-wrapper author">
-          <p>© {new Date().getFullYear()} <a href="https://ppauldev.github.io/cv/" hrefLang="en" rel="author" style={{ color: "inherit", textDecoration: "none" }}>Phillip Paul</a></p>
+          <p>© {new Date().getFullYear()} <OutboundLink href="https://ppauldev.github.io/cv/" hrefLang="en" rel="author" style={{ color: "inherit", textDecoration: "none" }}>Phillip Paul</OutboundLink></p>
         </div>
         <div id="footer-break">|</div>
         <div className="footer-item-wrapper">

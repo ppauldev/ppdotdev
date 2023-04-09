@@ -23,7 +23,7 @@ const App: React.FC = (): React.ReactElement => {
     <ApolloProvider client={client}>
       <Helmet htmlAttributes={{ lang: "en" }}>
         <meta charSet="utf-8" name="description" content="Software development, react, gatsby, graphql, graph cms, blog, typescript, javascript, python, clean code, testing, research, RPA, robotic process automation" />
-        <title>phillippaul.dev | Clean Code, React, TypeScript, Research</title>
+        <title>phillippaul.dev | React, TypeScript, Clean Code</title>
       </Helmet>
       <Webview />
     </ApolloProvider>
