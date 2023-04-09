@@ -13,7 +13,6 @@ import { RichTextContent } from "@graphcms/rich-text-types"
 import "./custom-prism-vsc-dark-plus.css"
 
 import "./post.css"
-import { OutboundLink } from "gatsby-plugin-gtag"
 
 interface IPost {
   post: IPostProps
@@ -83,11 +82,11 @@ const PostMarkdown: React.FC<IPostMarkdownProps> = ({ rtBody }): React.ReactElem
             </div>
           )
         },
-        a: ({ children, className, href, openInNewTab, title }) => {
-          return (
-            <OutboundLink href={href} title={title} className={className} target={openInNewTab ? "_blank" : "_self"} >{children}</OutboundLink>
-          )
-        }
+        // a: ({ children, className, href, openInNewTab, title }) => {
+        //   return (
+        //     <a href={href} title={title} className={className} target={openInNewTab ? "_blank" : "_self"} >{children}</a>
+        //   )
+        // }
       }}
     />
   )
