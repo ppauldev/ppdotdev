@@ -66,7 +66,7 @@ nav ul {
 nav ul li {
   align-items: center;
   border: 1px solid transparent;
-  color: rgb(110, 110, 110);
+  color: darkgray;
   display: flex;
   flex-direction: row;
   font-size: 0.9rem;
@@ -75,14 +75,15 @@ nav ul li {
 }
 
 nav ul li:hover {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid black;
+  color: black;
   cursor: pointer;
   transition: all 0.15s ease-in
 }
 
 nav ul li.active {
-  border-bottom: 1px solid gray;
-  color: rgb(36, 36, 36);
+  border-bottom: 1px solid black;
+  color: black;
   height: 43px;
   transition: all 0.15s ease-in;
 }
