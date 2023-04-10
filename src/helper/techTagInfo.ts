@@ -49,7 +49,7 @@ export const techTagInfo: { [index: string]: any } = {
   },
   mail: {
     imageSource: "https://icon-icons.com/de/symbol/E-Mail-envelope-mail-message/114031",
-    url: "",
+    url: "javascript:void(0)",
   },
   mongodb: {
     imageSource: "https://icon-icons.com/de/pack/Devicon/2415",

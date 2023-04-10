@@ -15,7 +15,7 @@ const TechTag: React.FC<ITechTag> = ({ keyword }): React.ReactElement => {
   const techTagSource = techTagInfo[normalizedKeyword]?.imageSource
 
   return (
-    <a className={techTagClassName} href={techTagUrl} data-imagesource={techTagSource} />
+    <a className={techTagClassName} href={techTagUrl} data-imagesource={techTagSource} title={techTagUrl} />
   )
 }
 
