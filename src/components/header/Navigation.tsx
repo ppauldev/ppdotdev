@@ -49,6 +49,24 @@ const CategoryBar: React.FC<ICategoryBar> = ({ activeElement, setPostType }): Re
     setPostType(value)
   }
 
+  const handleOnMouseEnter = (event: any) => {
+    event.target.style.borderBottom = "1px solid gray"
+
+    const item = document.querySelector<HTMLElement>("li.active")
+    if (item && item !== event.target) {
+      item.style.borderBottom = "1px solid transparent"
+    }
+  }
+
+  const handleOnMouseLeave = (event: any) => {
+    event.target.style.borderBottom = "1px solid transparent"
+
+    const item = document.querySelector<HTMLElement>("li.active")
+    if (item) {
+      item.style.borderBottom = "1px solid gray"
+    }
+  }
+
   const listElements: JSX.Element[] = navigationItems.map((item: string[]) => {
     const [attributeValue, textValue]: string[] = item
 
@@ -58,6 +76,8 @@ const CategoryBar: React.FC<ICategoryBar> = ({ activeElement, setPostType }): Re
         id={attributeValue === "bookscoffee" ? "special" : ""}
         className={activeElement === attributeValue ? "active" : ""}
         onClick={handleSelectPostType}
+        onMouseEnter={handleOnMouseEnter}
+        onMouseLeave={handleOnMouseLeave}
         value={attributeValue}
       >
         {attributeValue !== "bookscoffee" ? textValue : "📚 ☕"}

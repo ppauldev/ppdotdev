@@ -74,14 +74,16 @@ nav ul li {
   transition: all 0.1s ease-out;
 }
 
-nav ul li:hover{
+nav ul li:hover {
   border-bottom: 1px solid rgb(36, 36, 36);
   cursor: pointer;
   transition: all 0.1s ease-in
 }
 
 nav ul li.active {
+  border-bottom: 1px solid gray;
   color: rgb(36, 36, 36);
+  height: 43px;
   transition: all 0.1s ease-in;
 }
 
