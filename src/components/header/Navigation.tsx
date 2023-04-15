@@ -50,23 +50,19 @@ const CategoryBar: React.FC<ICategoryBar> = ({ activeElement, setPostType }): Re
   }
 
   const handleOnMouseEnter = (event: any) => {
-    event.target.style.borderBottom = "1px solid black"
     event.target.style.color = "black"
 
     const item = document.querySelector<HTMLElement>("li.active")
     if (item && item !== event.target) {
-      item.style.borderBottom = "1px solid transparent"
       item.style.color = "darkgray"
     }
   }
 
   const handleOnMouseLeave = (event: any) => {
-    event.target.style.borderBottom = "1px solid transparent"
     event.target.style.color = "darkgray"
 
     const item = document.querySelector<HTMLElement>("li.active")
     if (item) {
-      item.style.borderBottom = "1px solid black"
       item.style.color = "black"
     }
   }

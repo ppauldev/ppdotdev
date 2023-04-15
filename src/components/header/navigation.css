@@ -75,7 +75,6 @@ nav ul li {
 }
 
 nav ul li:hover {
-  border-bottom: 1px solid black;
   color: black;
   cursor: pointer;
   transition: all 0.15s ease-in
